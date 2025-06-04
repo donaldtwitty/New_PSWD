@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ProjectResources">
+    <resource url="&lt;urlset xmlns=&quot;https://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;" location="$PROJECT_DIR$" />
+    <resource url="https://www.sitemaps.org/schemas/sitemap/0.9" location="$PROJECT_DIR$" />
+    <resource url="sitemap.xml" location="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
