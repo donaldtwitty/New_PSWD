@@ -1,14 +1,27 @@
 function openDCModal() {
-    document.getElementById('dc-modal').classList.add('show');
+    const modal = document.getElementById('dc-modal');
+    modal.style.display = 'flex';
 }
 
 function closeDCModal() {
-    document.getElementById('dc-modal').classList.remove('show');
+    const modal = document.getElementById('dc-modal');
+    modal.style.display = 'none';
 }
 
-window.onclick = function(event) {
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
     const modal = document.getElementById('dc-modal');
     if (event.target === modal) {
-        modal.style.display = 'none';
+        closeDCModal();
     }
-}
+});
+
+// Close modal with Escape key
+window.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('dc-modal');
+        if (modal.style.display === 'flex') {
+            closeDCModal();
+        }
+    }
+});
