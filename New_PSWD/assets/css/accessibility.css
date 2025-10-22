@@ -1,17 +1,32 @@
+/* Skip Navigation */
 .skip-link {
     position: absolute;
     top: -40px;
-    left: 6px;
+    left: 10px;
     background: #000;
     color: #fff;
-    padding: 8px;
+    padding: 12px 20px;
     text-decoration: none;
-    z-index: 1000;
-    border-radius: 4px;
+    z-index: 9999;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
 }
 .skip-link:focus {
-    top: 6px;
+    top: 10px;
+    transform: scale(1.05);
+    outline: 3px solid #ffff00;
+    outline-offset: 2px;
 }
+.skip-link:hover {
+    background: #333;
+    transform: translateY(-1px);
+}
+
+/* Screen Reader Only */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -22,4 +37,73 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Focus Indicators */
+*:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .skip-link {
+        background: #000;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Touch Target Size */
+button,
+a,
+input[type='button'],
+input[type='submit'] {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Color Contrast Helpers */
+.text-contrast {
+    color: #000;
+    background: #fff;
+}
+
+/* Focus Trap for Modals */
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1050;
+}
+
+.modal[aria-hidden='true'] {
+    display: none;
 }

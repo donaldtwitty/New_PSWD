@@ -9,7 +9,7 @@ function closeDCModal() {
 }
 
 // Close modal when clicking outside
-window.addEventListener('click', function(event) {
+window.addEventListener('click', function (event) {
     const modal = document.getElementById('dc-modal');
     if (event.target === modal) {
         closeDCModal();
@@ -17,7 +17,7 @@ window.addEventListener('click', function(event) {
 });
 
 // Close modal with Escape key
-window.addEventListener('keydown', function(event) {
+window.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         const modal = document.getElementById('dc-modal');
         if (modal.style.display === 'flex') {

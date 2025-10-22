@@ -9,45 +9,52 @@ function mobileNav() {
     });
 }
 
-function onScroll(event) {
+function onScroll() {
     var scrollPos = $(document).scrollTop();
     $('.nav a').each(function () {
         var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.nav ul li a').removeClass("active");
-            currLink.addClass("active");
+        var refElement = $(currLink.attr('href'));
+        if (
+            refElement.position().top <= scrollPos &&
+            refElement.position().top + refElement.height() > scrollPos
+        ) {
+            $('.nav ul li a').removeClass('active');
+            currLink.addClass('active');
         } else {
-            currLink.removeClass("active");
+            currLink.removeClass('active');
         }
     });
 }
 
 function handleFormSubmission(form, popup) {
     if (form) {
-        form.addEventListener("submit", async function (e) {
+        form.addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             const formData = new FormData(form);
-            const endpoint = "https://formspree.io/f/xzzrnyzr";
-            
+            const endpoint = 'https://formspree.io/f/xzzrnyzr';
+
             try {
                 const response = await fetch(endpoint, {
-                    method: "POST",
+                    method: 'POST',
                     body: formData,
                     headers: {
-                        Accept: "application/json"
-                    }
+                        Accept: 'application/json',
+                    },
                 });
-                
+
                 if (response.ok) {
-                    popup.style.display = "flex";
+                    popup.style.display = 'flex';
                     form.reset();
                 } else {
-                    alert("There was a problem submitting the form. Please try again later.");
+                    alert(
+                        'There was a problem submitting the form. Please try again later.'
+                    );
                 }
             } catch (error) {
-                alert("There was a problem submitting the form. Please try again later.");
+                alert(
+                    'There was a problem submitting the form. Please try again later.'
+                );
             }
         });
     }
@@ -55,7 +62,7 @@ function handleFormSubmission(form, popup) {
 
 function closePopup(popup) {
     if (popup) {
-        popup.style.display = "none";
+        popup.style.display = 'none';
     }
 }
 
@@ -63,5 +70,5 @@ module.exports = {
     mobileNav,
     onScroll,
     handleFormSubmission,
-    closePopup
+    closePopup,
 };

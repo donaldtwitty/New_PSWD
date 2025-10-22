@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "script"
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-unused-vars": "warn",
+        "no-console": "warn"
+    },
+    "globals": {
+        "$": "readonly",
+        "jQuery": "readonly",
+        "scrollReveal": "readonly",
+        "openDCModal": "readonly",
+        "closeDCModal": "readonly"
+    },
+    "overrides": [
+        {
+            "files": ["**/*.min.js"],
+            "rules": {
+                "no-unused-vars": "off",
+                "no-undef": "off",
+                "no-redeclare": "off",
+                "no-empty": "off",
+                "no-useless-escape": "off",
+                "no-prototype-builtins": "off",
+                "no-cond-assign": "off"
+            }
+        }
+    ]
+}

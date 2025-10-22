@@ -20,17 +20,71 @@ Table of contents
 font & reset css
 ---------------------------------------------
 */
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900');
 
 /*
 ---------------------------------------------
 reset
 ---------------------------------------------
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
-s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
     margin: 0;
     padding: 0;
     border: 0;
@@ -38,7 +92,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 
 .clearfix:after {
-    content: ".";
+    content: '.';
     display: block;
     clear: both;
     visibility: hidden;
@@ -58,13 +112,20 @@ html[xmlns] .clearfix {
     height: 1%;
 }
 
-ul, li {
+ul,
+li {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-header, nav, section, article, aside, footer, hgroup {
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
     display: block;
 }
 
@@ -72,8 +133,9 @@ header, nav, section, article, aside, footer, hgroup {
     box-sizing: border-box;
 }
 
-html, body {
-    font-family: "Raleway", sans-serif;
+html,
+body {
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     background-color: #fff;
     font-size: 16px;
@@ -86,7 +148,12 @@ a {
     text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -103,7 +170,7 @@ global styles
 html,
 body {
     background: #fff;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 ::selection {
@@ -202,7 +269,7 @@ body {
 }
 
 .left-text p.dark {
-    color: #3B566E;
+    color: #3b566e;
 }
 
 .padding-bottom-top-60 {
@@ -289,7 +356,8 @@ body {
 }
 
 @media (max-width: 991px) {
-    html, body {
+    html,
+    body {
         overflow-x: hidden;
     }
 
@@ -322,14 +390,14 @@ a.main-button-slider {
 }
 
 a.main-button-slider:hover {
-    background-color: #A274FF;
+    background-color: #a274ff;
 }
 
 a.main-button {
     font-size: 13px;
     border-radius: 20px;
     padding: 12px 20px;
-    background-color: #A274FF;
+    background-color: #a274ff;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 0.25px;
@@ -350,7 +418,7 @@ button.main-button {
     font-size: 13px;
     border-radius: 20px;
     padding: 12px 20px;
-    background-color: #A274FF;
+    background-color: #a274ff;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 0.25px;
@@ -363,7 +431,6 @@ button.main-button {
 button.main-button:hover {
     background-color: #120037;
 }
-
 
 /*
 ---------------------------------------------
@@ -447,7 +514,7 @@ header
 }
 
 .header-area .main-nav .nav li a:hover {
-    color: #A274FF;
+    color: #a274ff;
 }
 
 .header-area .main-nav .menu-trigger {
@@ -470,7 +537,7 @@ header
     -o-transition: all 0.4s;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    background-color: #3B566E;
+    background-color: #3b566e;
     display: block;
     position: absolute;
     width: 30px;
@@ -484,7 +551,7 @@ header
     -o-transition: all 0.4s;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    background-color: #3B566E;
+    background-color: #3b566e;
     display: block;
     position: absolute;
     width: 30px;
@@ -495,7 +562,7 @@ header
 
 .header-area .main-nav .menu-trigger span:before,
 .header-area .main-nav .menu-trigger span:after {
-    content: "";
+    content: '';
 }
 
 .header-area .main-nav .menu-trigger span {
@@ -531,7 +598,7 @@ header
     -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
     -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
     transform: translateY(6px) translateX(1px) rotate(45deg);
-    background-color: #3B566E;
+    background-color: #3b566e;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -539,7 +606,7 @@ header
     -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
     -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
     transform: translateY(-6px) translateX(1px) rotate(-45deg);
-    background-color: #3B566E;
+    background-color: #3b566e;
 }
 
 .header-area.header-sticky {
@@ -628,7 +695,7 @@ header
         padding: 0px !important;
         border: none !important;
         background: #fff !important;
-        color: #3B566E !important;
+        color: #3b566e !important;
     }
 
     .header-area .main-nav .nav li a:hover {
@@ -763,7 +830,6 @@ welcome
     }
 }
 
-
 /*
 ---------------------------------------------
 features
@@ -772,8 +838,8 @@ features
 .features-small-item {
     cursor: pointer;
     display: block;
-    background: #FFFFFF;
-    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+    background: #ffffff;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
@@ -872,7 +938,7 @@ Services and Clients & home seperator
     position: absolute;
     width: 140%;
     height: 140%;
-    opacity: .95;
+    opacity: 0.95;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -955,7 +1021,7 @@ Services and Clients & home seperator
     z-index: -1;
     background: #fff;
     width: 100%;
-    opacity: .15;
+    opacity: 0.15;
     height: 100%;
     bottom: -10px;
     left: 0px;
@@ -975,7 +1041,7 @@ Services and Clients & home seperator
     font-weight: 400;
     font-size: 14px;
     color: #777;
-    letter-spacing: .75px;
+    letter-spacing: 0.75px;
 }
 
 .mini .mini-content .mini-box strong {
@@ -1015,7 +1081,6 @@ Services and Clients & home seperator
     align-items: center;
     margin-bottom: 15px;
 }
-
 
 /*.counter {*/
 /*  overflow: hidden;*/
@@ -1155,7 +1220,6 @@ Services and Clients & home seperator
     /*}*/
 }
 
-
 /* BLOG RESPONSIVE */
 @media (max-width: 768px) {
     .blog-content {
@@ -1190,7 +1254,7 @@ team
 */
 .team-item {
     background: #fff;
-    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     position: relative;
     margin-bottom: 30px;
@@ -1206,7 +1270,7 @@ team
     margin-left: 25px;
     margin-top: 25px;
     font-size: 30px;
-    color: #4E47DE;
+    color: #4e47de;
     text-align: center;
 }
 
@@ -1253,7 +1317,7 @@ team
     display: block;
     font-weight: 400;
     font-size: 15px;
-    color: #A274FF;
+    color: #a274ff;
     letter-spacing: 0.25px;
 }
 
@@ -1275,7 +1339,7 @@ pricing
 ---------------------------------------------
 */
 .pricing-item {
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     margin-bottom: 30px;
@@ -1460,7 +1524,6 @@ blog
     text-align: left;
 }
 
-
 /*
 ---------------------------------------------
 contact
@@ -1482,7 +1545,7 @@ contact
 .contact-text {
     font-weight: 400;
     font-size: 14px;
-    color: #6F8BA4;
+    color: #6f8ba4;
     letter-spacing: 0.6px;
     line-height: 26px;
 }
@@ -1613,7 +1676,7 @@ footer .social li {
 }
 
 footer .social li a {
-    color: #A274FF;
+    color: #a274ff;
     text-align: center;
     background-color: #fff;
     width: 36px;
@@ -1748,7 +1811,7 @@ preloader
 #dc-modal {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, 0.6);
     display: none; /* toggled via JS */
     place-items: center; /* grid centering */
     padding: 2rem; /* breathing room around dialog on small screens */
@@ -1762,25 +1825,25 @@ preloader
     overflow: auto; /* scroll inner content if needed */
     border-radius: 12px;
     padding: 1.5rem 1.75rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
     position: relative;
     text-align: left;
 }
 
 #dc-modal h2 {
-    margin: 0 0 .5rem;
+    margin: 0 0 0.5rem;
     font-size: 1.25rem;
     line-height: 1.4;
 }
 
 #dc-modal h3 {
-    margin: 1rem 0 .5rem;
+    margin: 1rem 0 0.5rem;
     font-size: 1rem;
 }
 
 #dc-modal p {
-    margin: .5rem 0 1rem;
-    font-size: .95rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
 }
 
 #dc-modal ul {
@@ -1788,13 +1851,13 @@ preloader
 }
 
 #dc-modal li {
-    margin: .35rem 0;
+    margin: 0.35rem 0;
 }
 
 #dc-modal .close {
     position: absolute;
-    top: .4rem;
-    right: .6rem;
+    top: 0.4rem;
+    right: 0.6rem;
     font-size: 1.75rem;
     line-height: 1;
     background: transparent;
@@ -1811,7 +1874,7 @@ preloader
     display: grid;
     place-items: center;
     inset: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 9999;
 }
 /* D&C Modal Styles */
@@ -1822,7 +1885,7 @@ preloader
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1835,7 +1898,7 @@ preloader
     width: 350px;
     height: 350px;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
@@ -1879,7 +1942,7 @@ preloader
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background: rgba(0,0,0,0.5) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
     z-index: 999999 !important;
     display: flex !important;
     justify-content: center !important;

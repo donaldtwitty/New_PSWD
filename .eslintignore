@@ -1,0 +1,5 @@
+**/*.min.js
+**/node_modules/
+**/coverage/
+New_PSWD/assets/js/popper.js
+New_PSWD/assets/js/modern.js

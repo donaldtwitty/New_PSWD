@@ -33,5 +33,5 @@ module.exports = {
     openDCModal,
     closeDCModal,
     handleClickOutside,
-    handleEscapeKey
+    handleEscapeKey,
 };
