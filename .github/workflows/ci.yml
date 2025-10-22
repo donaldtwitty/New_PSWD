@@ -44,5 +44,3 @@ jobs:
       uses: treosh/lighthouse-ci-action@v10
       with:
         configPath: './lighthouserc.json'
-        uploadArtifacts: true
-        artifactName: 'lighthouse_results'
