@@ -11,7 +11,9 @@
         "lint:fix": "eslint \"**/*.js\" --fix",
         "build": "npm run lint && npm run test:coverage && npm run format",
         "validate": "npm run lint && npm run test",
-        "pre-commit": "npm run validate && npm run format"
+        "pre-commit": "npm run validate && npm run format",
+        "deploy": "npm run build && echo 'Ready for deployment'",
+        "audit": "npm audit --audit-level moderate"
     },
     "devDependencies": {
         "jest": "^29.7.0",

@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://purposefulsolutionswebdesign.com/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Block sensitive areas
+Disallow: /New_PSWD/assets/js/
+Disallow: /__tests__/
+Disallow: /node_modules/
+Disallow: /coverage/
