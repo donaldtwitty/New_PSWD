@@ -78,8 +78,19 @@
         <link rel="stylesheet" href="New_PSWD/assets/css/modal.css" />
         <link rel="stylesheet" href="New_PSWD/assets/css/accessibility.css" />
 
-        <!-- Accessibility Script -->
+        <!-- Performance & Security Scripts -->
+        <script src="New_PSWD/assets/js/security.js" defer></script>
         <script src="New_PSWD/assets/js/accessibility.js" defer></script>
+        <script src="New_PSWD/assets/js/analytics.js" defer></script>
+        
+        <!-- Service Worker Registration -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
 
         <link
             rel="icon"

@@ -8,7 +8,10 @@
         "test:watch": "jest --watch",
         "format": "prettier --write \"**/*.{js,html,css,json}\"",
         "lint": "eslint \"**/*.js\"",
-        "lint:fix": "eslint \"**/*.js\" --fix"
+        "lint:fix": "eslint \"**/*.js\" --fix",
+        "build": "npm run lint && npm run test:coverage && npm run format",
+        "validate": "npm run lint && npm run test",
+        "pre-commit": "npm run validate && npm run format"
     },
     "devDependencies": {
         "jest": "^29.7.0",

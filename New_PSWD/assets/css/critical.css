@@ -1,0 +1,6 @@
+/* Critical CSS - Above the fold styles */
+body { font-family: Raleway, sans-serif; margin: 0; }
+.header-area { position: fixed; top: 0; width: 100%; z-index: 999; }
+.welcome-area { min-height: 100vh; display: flex; align-items: center; }
+.skip-link { position: absolute; top: -40px; left: 10px; background: #000; color: #fff; padding: 12px 20px; }
+.skip-link:focus { top: 10px; }

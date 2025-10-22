@@ -1,0 +1,16 @@
+{
+  "name": "Purposeful Solutions Web Design",
+  "short_name": "PSWD",
+  "description": "Web Design with Purpose",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "New_PSWD/assets/images/PSWDLogoFavicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
