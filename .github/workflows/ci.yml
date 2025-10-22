@@ -45,3 +45,4 @@ jobs:
       with:
         configPath: './lighthouserc.json'
         uploadArtifacts: true
+        artifactName: 'lighthouse_results'
