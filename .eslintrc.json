@@ -23,7 +23,9 @@
         "jQuery": "readonly",
         "scrollReveal": "readonly",
         "openDCModal": "readonly",
-        "closeDCModal": "readonly"
+        "closeDCModal": "readonly",
+        "gtag": "readonly",
+        "performance": "readonly"
     },
     "overrides": [
         {

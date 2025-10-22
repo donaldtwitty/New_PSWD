@@ -5,7 +5,12 @@
     // Content Security Policy reporting
     if ('securitypolicyviolation' in document) {
         document.addEventListener('securitypolicyviolation', function(e) {
-            console.warn('CSP Violation:', e.violatedDirective);
+            // Report CSP violations to analytics instead of console
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'csp_violation', {
+                    violated_directive: e.violatedDirective
+                });
+            }
         });
     }
 

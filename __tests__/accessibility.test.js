@@ -237,14 +237,6 @@ describe('Accessibility Functions', () => {
             preloader.style.visibility = 'hidden';
 
             // Trigger mutation observer
-            const mutations = [
-                {
-                    type: 'attributes',
-                    attributeName: 'style',
-                    target: preloader,
-                },
-            ];
-
             observer.disconnect = jest.fn();
 
             expect(observer).toBeDefined();

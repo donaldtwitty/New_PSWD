@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 function openDCModal() {
     const modal = document.getElementById('dc-modal');
     modal.style.display = 'flex';
