@@ -512,12 +512,21 @@
 }
 
 /* ------ Portfolio / Work Section ------ */
+/* Column-level bottom padding for project card rows (margin-bottom on the
+   card itself doesn't work here because height:100% absorbs it in flex rows) */
+#work-grid .col-lg-6,
+#work-grid .col-md-6,
+#featured-work .col-lg-4,
+#featured-work .col-md-6 {
+    padding-bottom: 24px;
+}
+
 .project-card {
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 2px 16px rgba(18, 0, 55, 0.07);
-    margin-bottom: 30px;
+    margin-bottom: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
     display: flex;
@@ -953,7 +962,7 @@ figure.case-study-mockup {
 
 /* === Homepage featured work CTA row === */
 .featured-work-cta {
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 /* === Case study solution mockup row === */
@@ -977,4 +986,230 @@ figure.case-study-mockup {
 /* === JS-controlled visibility (replaces style="display:none") === */
 .js-hidden {
     display: none;
+}
+
+/* === Nav: tighter spacing for more items === */
+.header-area .main-nav .nav li {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+/* === Testimonial star rating === */
+.testimonial-stars {
+    color: #f5a623;
+    font-size: 17px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* === Testimonial initials avatar === */
+.testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8261ee, #5c3ecf);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* === Testimonial team-info override: avatar left + text right === */
+#testimonials .team-item .team-content .team-info {
+    float: none !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 25px 22px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+#testimonials .team-item .team-content .team-info .testimonial-author {
+    display: flex;
+    flex-direction: column;
+}
+[data-theme='dark'] #testimonials .team-item .team-content .team-info {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* === Blog post date (card + article header) === */
+.blog-date {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.42);
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+.blog-post-meta {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 8px;
+}
+.blog-post-meta time {
+    font-style: italic;
+}
+
+/* === Breadcrumb navigation === */
+.breadcrumb-nav {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 14px;
+}
+.breadcrumb-nav a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.breadcrumb-nav .breadcrumb-sep {
+    margin: 0 5px;
+    opacity: 0.4;
+}
+
+/* === Process step label === */
+.mini-box-step {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.38);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* === Gradient project card placeholder tile === */
+.project-card-image.gradient-tile {
+    background: linear-gradient(135deg, #8261ee 0%, #4a2ab0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 195px;
+}
+.project-card-image.gradient-tile .placeholder-label {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* === Project stat badge (featured work cards) === */
+.project-stat-badge {
+    display: inline-block;
+    background: rgba(130, 97, 238, 0.1);
+    color: #8261ee;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+/* === Book-a-call CTA block === */
+.contact-book-call {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+.contact-book-call p {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.48);
+    margin-bottom: 10px;
+}
+.book-call-link {
+    display: inline-block;
+    padding: 9px 22px;
+    border: 2px solid #8261ee;
+    border-radius: 4px;
+    color: #8261ee;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.book-call-link:hover {
+    background: #8261ee;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* === Visible form labels === */
+.form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.55);
+    margin-bottom: 4px;
+    margin-top: 14px;
+    letter-spacing: 0.2px;
+}
+.form-label:first-child {
+    margin-top: 0;
+}
+
+/* === Dark mode overrides for new components === */
+[data-theme='dark'] .blog-date {
+    color: rgba(255, 255, 255, 0.38);
+}
+[data-theme='dark'] .project-stat-badge {
+    background: rgba(130, 97, 238, 0.18);
+    color: #b89dff;
+}
+[data-theme='dark'] .contact-book-call {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+[data-theme='dark'] .contact-book-call p {
+    color: rgba(255, 255, 255, 0.45);
+}
+[data-theme='dark'] .book-call-link {
+    border-color: #8261ee;
+    color: #b89dff;
+}
+[data-theme='dark'] .book-call-link:hover {
+    background: #8261ee;
+    color: #fff;
+}
+[data-theme='dark'] .form-label {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* === Fix: .mini CTA sections that use .container directly (no .mini-content wrapper)
+   The template's ::before pseudo-element sits at z-index 2; content needs z-index 3 === */
+.mini > .container {
+    position: relative;
+    z-index: 3;
+}
+.mini .info {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.mini .info h2 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 0.25px;
+    margin-bottom: 30px;
+}
+.mini .info p {
+    color: #fff;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 40px;
 }
