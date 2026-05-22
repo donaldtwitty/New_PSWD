@@ -476,3 +476,403 @@
 [data-theme='dark'] .related-work-placeholder p {
     color: #888;
 }
+
+/* ------ Portfolio / Work Section ------ */
+.project-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(18, 0, 55, 0.07);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(130, 97, 238, 0.15);
+}
+
+.project-card-image {
+    background: linear-gradient(135deg, #e8e0ff 0%, #d8ccff 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-image .placeholder-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8261ee;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.project-card-content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-type {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a759d1;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.project-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #120037;
+    margin: 0 0 12px;
+    line-height: 1.4;
+}
+
+.project-card-outcome {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0 0 20px;
+    flex: 1;
+}
+
+.project-card-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8261ee;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.project-card-link:hover {
+    color: #120037;
+    gap: 10px;
+}
+
+/* ------ Case Study Hero ------ */
+.case-study-hero {
+    background: linear-gradient(135deg, #120037 0%, #8261ee 100%);
+    padding: 130px 0 70px;
+    text-align: center;
+}
+
+.case-study-hero .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    transition: color 0.3s ease;
+}
+
+.case-study-hero .back-link:hover {
+    color: #fff;
+}
+
+.case-study-hero .client-type {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.case-study-hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    max-width: 760px;
+    margin: 0 auto 16px;
+    letter-spacing: 0.5px;
+}
+
+.case-study-hero .headline-stat {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    .case-study-hero {
+        padding: 110px 20px 50px;
+    }
+
+    .case-study-hero h1 {
+        font-size: 24px;
+    }
+}
+
+/* ------ Case Study Mockup Areas ------ */
+.case-study-hero-mockup {
+    background: #f7f4ff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+figure.case-study-mockup {
+    margin: 30px 0;
+}
+
+.case-study-mockup .mockup-placeholder {
+    background: linear-gradient(135deg, #e8e0ff 0%, #d8ccff 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.case-study-mockup.desktop .mockup-placeholder {
+    min-height: 300px;
+}
+
+.case-study-mockup.mobile .mockup-placeholder {
+    min-height: 200px;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+.case-study-mockup .placeholder-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8261ee;
+    text-align: center;
+}
+
+.case-study-mockup figcaption {
+    font-size: 13px;
+    color: #999;
+    margin-top: 10px;
+    font-style: italic;
+    letter-spacing: 0.3px;
+}
+
+/* ------ Case Study Content Lists ------ */
+.case-study-points {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.case-study-points li {
+    padding: 12px 0 12px 38px;
+    position: relative;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    border-bottom: 1px solid #f0ecff;
+}
+
+.case-study-points li:last-child {
+    border-bottom: none;
+}
+
+.case-study-points li::before {
+    content: '\f00c';
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: #8261ee;
+    font-size: 14px;
+}
+
+.case-study-results {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.case-study-results li {
+    padding: 14px 0 14px 42px;
+    position: relative;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    border-bottom: 1px solid #f0ecff;
+}
+
+.case-study-results li:last-child {
+    border-bottom: none;
+}
+
+.case-study-results li::before {
+    content: '\f0a9';
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: #a759d1;
+    font-size: 18px;
+}
+
+/* ------ Tech Tags ------ */
+.tech-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: #f0ecff;
+    color: #5a3fc0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+/* ------ Client Voice Testimonial Band ------ */
+.client-voice-section {
+    background: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.client-voice-quote {
+    font-size: 19px;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.8;
+    max-width: 760px;
+    margin: 0 auto 28px;
+}
+
+.client-voice-quote::before {
+    content: '\f10d';
+    font-family: FontAwesome;
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.3);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.client-voice-attribution {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.client-voice-attribution span {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-transform: none;
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ------ In-house Build Note ------ */
+.inhouse-note {
+    background: #f7f4ff;
+    border-left: 4px solid #8261ee;
+    border-radius: 0 12px 12px 0;
+    padding: 24px 28px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.inhouse-note p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.inhouse-note strong {
+    color: #120037;
+}
+
+/* Dark mode — portfolio */
+[data-theme='dark'] .project-card {
+    background: #1e1e2e;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .project-card-title {
+    color: #f0f0f0;
+}
+
+[data-theme='dark'] .project-card-outcome {
+    color: #aaa;
+}
+
+[data-theme='dark'] .project-card-link {
+    color: #b89dff;
+}
+
+[data-theme='dark'] .project-card-link:hover {
+    color: #fff;
+}
+
+[data-theme='dark'] .case-study-hero-mockup {
+    background: #1a1a2e;
+}
+
+[data-theme='dark'] .case-study-mockup .mockup-placeholder {
+    background: linear-gradient(135deg, #2a2040 0%, #1e1e3e 100%);
+}
+
+[data-theme='dark'] .case-study-mockup .placeholder-label {
+    color: #b89dff;
+}
+
+[data-theme='dark'] .case-study-points li,
+[data-theme='dark'] .case-study-results li {
+    color: #ccc;
+    border-bottom-color: #2a2a3a;
+}
+
+[data-theme='dark'] .tech-tag {
+    background: #2a2040;
+    color: #b89dff;
+}
+
+[data-theme='dark'] .inhouse-note {
+    background: #1e1e2e;
+    border-left-color: #8261ee;
+}
+
+[data-theme='dark'] .inhouse-note p {
+    color: #ccc;
+}
+
+[data-theme='dark'] .inhouse-note strong {
+    color: #f0f0f0;
+}
