@@ -440,6 +440,10 @@
     margin-bottom: 16px;
 }
 
+.mini .info {
+    text-align: center;
+}
+
 .mini .info h2 {
     color: #fff;
     font-size: 30px;
@@ -905,4 +909,72 @@ figure.case-study-mockup {
 
 [data-theme='dark'] .inhouse-note strong {
     color: #f0f0f0;
+}
+
+/* === Footer shared === */
+.footer-vob-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer-vob-logo {
+    height: 80px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.footer-vob-text {
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+}
+.footer-location-text {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 11px;
+    margin: 6px 0 0;
+    letter-spacing: 0.5px;
+}
+
+/* === Blog back-to-blog CTA wrapper === */
+.blog-back-cta {
+    margin-top: 40px;
+}
+
+/* === Service page hero CTA === */
+.service-hero-cta {
+    margin-top: 28px;
+    display: inline-block;
+}
+
+/* === Service page why-us feature icons === */
+.service-icon {
+    color: #8261ee;
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* === Homepage featured work CTA row === */
+.featured-work-cta {
+    margin-top: 10px;
+}
+
+/* === Case study solution mockup row === */
+.solution-mockup-row {
+    margin-top: 30px;
+}
+
+/* === Case study service back-link === */
+.case-study-service-link {
+    margin-top: 16px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+}
+.case-study-service-link a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* === JS-controlled visibility (replaces style="display:none") === */
+.js-hidden {
+    display: none;
 }

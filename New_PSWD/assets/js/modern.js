@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 );
                 if (response.ok) {
-                    popup.style.display = 'flex';
+                    popup.classList.remove('js-hidden');
                     form.reset();
                 } else {
                     alert(
@@ -112,8 +112,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.closePopup = function () {
-        popup.style.display = 'none';
+        popup.classList.add('js-hidden');
     };
+
+    const popupBtn = document.querySelector('.popup-button');
+    if (popupBtn) {
+        popupBtn.addEventListener('click', window.closePopup);
+    }
 
     // Back to top button
     const backToTop = document.getElementById('back-to-top');
