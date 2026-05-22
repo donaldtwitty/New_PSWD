@@ -1,0 +1,341 @@
+/* ==============================================
+   Purposeful Solutions Web Design
+   Enhancements stylesheet — stats, FAQ, pricing,
+   blog hero, contact form select, client logos
+   ============================================== */
+
+/* ------ Stats Section ------ */
+.stats-section {
+    padding: 70px 0;
+    background: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+}
+
+.stat-item {
+    padding: 20px 10px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    line-height: 1;
+    display: block;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .stat-item {
+        margin-bottom: 30px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 30px;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+}
+
+/* ------ FAQ Section ------ */
+.faq-item {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.faq-item[open] {
+    box-shadow: 0 4px 20px rgba(18, 0, 55, 0.1);
+    border-color: #d8ccff;
+}
+
+.faq-question {
+    font-weight: 500;
+    font-size: 15px;
+    color: #120037;
+    padding: 18px 24px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 24px;
+    color: #8261ee;
+    font-weight: 300;
+    flex-shrink: 0;
+    margin-left: 16px;
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.faq-item[open] .faq-question::after {
+    transform: rotate(45deg);
+}
+
+.faq-item[open] .faq-question {
+    color: #8261ee;
+}
+
+.faq-answer {
+    padding: 0 24px 22px;
+    border-top: 1px solid #f0ecff;
+    margin-top: 0;
+}
+
+.faq-answer p {
+    font-size: 15px;
+    color: #666;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    margin: 16px 0 0;
+}
+
+/* ------ Blog Post Hero (replaces full-screen welcome area) ------ */
+.blog-post-hero {
+    background: linear-gradient(135deg, #120037 0%, #8261ee 100%);
+    padding: 130px 0 60px;
+    text-align: center;
+}
+
+.blog-post-hero .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    transition: color 0.3s ease;
+}
+
+.blog-post-hero .back-link:hover {
+    color: #fff;
+}
+
+.blog-post-hero .back-link i {
+    font-size: 12px;
+}
+
+.blog-post-hero h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    max-width: 720px;
+    margin: 0 auto 18px;
+    letter-spacing: 0.5px;
+}
+
+.blog-post-hero .blog-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    .blog-post-hero {
+        padding: 110px 20px 50px;
+    }
+
+    .blog-post-hero h1 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .blog-post-hero .blog-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* ------ Blog Article Content ------ */
+.blog-article-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.blog-article-content h2 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #120037;
+    margin: 36px 0 12px;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+}
+
+.blog-article-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+
+.blog-article-content .intro-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 32px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.blog-article-content .closing-text {
+    font-size: 15px;
+    color: #666;
+    line-height: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #f0ecff;
+    font-style: italic;
+}
+
+/* ------ Pricing Badge ------ */
+.pricing-badge {
+    display: inline-block;
+    background: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+/* ------ Contact Form Select ------ */
+.contact-form select {
+    color: #777;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #eee;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 44px;
+    border-radius: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-bottom: 30px;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23aaa' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    cursor: pointer;
+}
+
+.contact-form select:focus {
+    border-color: #8261ee;
+}
+
+/* ------ Client Logo Normalization ------ */
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.client-logo img {
+    max-height: 80px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+}
+
+.client-logo:hover img {
+    opacity: 0.8;
+}
+
+/* ------ Back-to-top button refinement ------ */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(130, 97, 238, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(130, 97, 238, 0.5);
+}
+
+#back-to-top.visible {
+    display: flex;
+}
+
+/* ------ Pricing section note ------ */
+.pricing-note {
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+.pricing-note a {
+    color: #8261ee;
+}
+
+.pricing-note a:hover {
+    color: #120037;
+}

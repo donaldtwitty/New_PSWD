@@ -6,18 +6,57 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta
+            name="description"
+            content="Discover the top web design trends of 2025 — from microinteractions and dark mode to bold typography and inclusive design — and what's here to stay."
+        />
+        <meta name="author" content="Purposeful Solutions Web Design" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph meta tags -->
+        <meta
+            property="og:title"
+            content="2025 Web Design Trends: What's Hot and What's Here to Stay | PSWD Blog"
+        />
+        <meta
+            property="og:description"
+            content="Discover the top web design trends shaping digital experiences in 2025 and how your brand can stay ahead of the curve."
+        />
+        <meta
+            property="og:image"
+            content="https://purposefulsolutionswebdesign.com/New_PSWD/assets/images/code.png"
+        />
+        <meta
+            property="og:url"
+            content="https://purposefulsolutionswebdesign.com/blog02.html"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:site_name"
+            content="Purposeful Solutions Web Design"
+        />
+
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="2025 Web Design Trends: What's Hot and What's Here to Stay"
+        />
+        <meta
+            name="twitter:description"
+            content="A look at the innovations shaping digital experiences in 2025."
+        />
+        <meta
+            name="twitter:image"
+            content="https://purposefulsolutionswebdesign.com/New_PSWD/assets/images/code.png"
+        />
+
         <link
             href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
             rel="stylesheet"
         />
 
-        <title>Softy Pinko - Bootstrap 4.0 Theme</title>
-        <!--
-    SOFTY PINKO
-    https://templatemo.com/tm-535-softy-pinko
-    -->
+        <title>2025 Web Design Trends: What's Hot and What's Here to Stay | Purposeful Solutions Web Design</title>
 
         <!-- Additional CSS Files -->
         <link
@@ -25,33 +64,92 @@
             type="text/css"
             href="New_PSWD/assets/css/bootstrap.min.css"
         />
-
         <link
             rel="stylesheet"
             type="text/css"
             href="New_PSWD/assets/css/font-awesome.css"
         />
-
         <link
             rel="stylesheet"
-            href="New_PSWD/assets/css/templatemo-softy-pinko.css"
+            href="New_PSWD/assets/css/templatemo-softy-pinko.min.css"
         />
+        <link rel="stylesheet" href="New_PSWD/assets/css/modal.css" />
+        <link rel="stylesheet" href="New_PSWD/assets/css/accessibility.css" />
+        <link rel="stylesheet" href="New_PSWD/assets/css/enhancements.css" />
+
+        <!-- Performance & Security Scripts -->
+        <script src="New_PSWD/assets/js/security.js" defer></script>
+        <script src="New_PSWD/assets/js/accessibility.js" defer></script>
+        <script src="New_PSWD/assets/js/analytics.js" defer></script>
 
         <link
             rel="icon"
             href="New_PSWD/assets/images/PSWDLogoFavicon.png"
             type="image/png"
         />
+        <link rel="manifest" href="/manifest.json" />
+
+        <!-- PWA Meta Tags -->
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="PSWD" />
+
+        <link
+            rel="canonical"
+            href="https://purposefulsolutionswebdesign.com/blog02.html"
+        />
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "2025 Web Design Trends: What's Hot and What's Here to Stay",
+                "description": "Discover the top web design trends of 2025 — from microinteractions to inclusive design — and what's here to stay.",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Purposeful Solutions Web Design"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Purposeful Solutions Web Design",
+                    "url": "https://purposefulsolutionswebdesign.com"
+                },
+                "url": "https://purposefulsolutionswebdesign.com/blog02.html"
+            }
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-S0ZR6NHZ50"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-S0ZR6NHZ50');
+        </script>
     </head>
 
     <body>
+        <!-- ***** Skip Navigation ***** -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
         <!-- ***** Preloader Start ***** -->
-        <div id="preloader">
+        <div
+            id="preloader"
+            role="status"
+            aria-label="Loading content, please wait"
+            aria-live="polite"
+        >
             <div class="jumper">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
+            <span class="sr-only">Loading...</span>
         </div>
         <!-- ***** Preloader End ***** -->
 
@@ -60,52 +158,67 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <nav class="main-nav">
+                        <nav
+                            class="main-nav"
+                            role="navigation"
+                            aria-label="Main navigation"
+                        >
                             <!-- ***** Logo Start ***** -->
                             <a href="index.html#welcome" class="logo">
                                 <img
                                     src="New_PSWD/assets/images/PurposefulSolutionsWebDesignLogo2.png"
-                                    alt=""
+                                    alt="Purposeful Solutions Web Design Logo"
                                 />
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <li>
-                                    <a href="index.html#welcome" class="active"
-                                        >Home</a
+                            <ul class="nav" role="menubar">
+                                <li role="none">
+                                    <button
+                                        id="dark-mode-toggle"
+                                        aria-label="Toggle dark mode"
+                                        aria-pressed="false"
                                     >
+                                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                        <span class="sr-only">Toggle dark mode</span>
+                                    </button>
                                 </li>
-                                <li><a href="index.html#features">About</a></li>
-                                <li>
-                                    <a href="index.html#work-process"
-                                        >Process</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#welcome" role="menuitem">Home</a>
                                 </li>
-                                <li>
-                                    <a href="index.html#testimonials"
-                                        >Testimonials</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#features" role="menuitem">About</a>
                                 </li>
-                                <li>
-                                    <a href="index.html#our-services"
-                                        >Services</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#work-process" role="menuitem">Process</a>
                                 </li>
-                                <li><a href="index.html#blog">Blogs</a></li>
-                                <li>
-                                    <a href="index.html#contact-us"
-                                        >Contact Us</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#testimonials" role="menuitem">Testimonials</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#client-showcase" role="menuitem">Clients</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#our-services" role="menuitem">Services</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#pricing" role="menuitem">Pricing</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#blog" class="active" role="menuitem" aria-current="page">Blogs</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#contact-us" role="menuitem">Contact Us</a>
                                 </li>
                             </ul>
-                            <a
-                                href="#"
+                            <button
                                 class="menu-trigger"
                                 aria-label="Toggle site menu"
+                                aria-expanded="false"
+                                aria-controls="nav-menu"
                             >
                                 <span>Menu</span>
-                            </a>
+                            </button>
                             <!-- ***** Menu End ***** -->
                         </nav>
                     </div>
@@ -114,118 +227,89 @@
         </header>
         <!-- ***** Header Area End ***** -->
 
-        <!-- ***** Welcome Area Start ***** -->
-        <div
-            class="welcome-area"
-            id="welcome features, work-process, testimonials, our-services, blog, contact-us"
-        >
-            <!-- ***** Header Text Start ***** -->
-            <div class="header-text">
+        <main id="main-content">
+            <!-- ***** Blog Post Hero Start ***** -->
+            <div class="blog-post-hero">
                 <div class="container">
-                    <img
-                        src="New_PSWD/assets/images/PSWDLogoWhite.png"
-                        alt=""
-                    />
-                    <div class="row">
-                        <div
-                            class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12"
-                        >
-                            <h1>
-                                Web Design with <strong>Purpose</strong
-                                ><br />Results that <strong>Matter</strong>
-                            </h1>
-                            <p>
-                                We craft websites that elevate your brand,
-                                amplify your message, and help you reach your
-                                full potential.
-                            </p>
-                            <a
-                                href="index.html#contact-form"
-                                class="main-button-slider"
-                                >Let’s Build Your Site</a
-                            >
-                        </div>
-                    </div>
+                    <a href="index.html#blog" class="back-link">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Blogs
+                    </a>
+                    <h1>2025 Web Design Trends: What's Hot and What's Here to Stay</h1>
+                    <p class="blog-subtitle">A look at the innovations shaping digital experiences.</p>
                 </div>
             </div>
-            <!-- ***** Header Text End ***** -->
-        </div>
-        <!-- ***** Welcome Area End ***** -->
+            <!-- ***** Blog Post Hero End ***** -->
 
-        <!-- ***** Blog Start ***** -->
-        <section class="section" id="blog">
-            <div class="container">
-                <!-- ***** Section Title Start ***** -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center">
-                            <h1 class="section-title">
-                                2025 Web Design Trends: What’s Hot and What’s
-                                Here to Stay
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Section Title End ***** -->
-
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
-                        <div class="blog-post-thumb">
-                            <div class="text-center">
-                                <h4>
-                                    <br />A look at the innovations shaping
-                                    digital experiences.
-                                </h4>
-                            </div>
-                            <div class="blog-content text-justify">
-                                <p>
-                                    The digital landscape evolves fast, and
-                                    staying current can give your brand a sharp
-                                    competitive edge. Here’s what’s trending in
-                                    2025: <br /><br />
-                                    <strong>1. Microinteractions</strong><br />
-                                    Small animations, such as button hovers or
-                                    form field feedback, add polish and enhance
-                                    user engagement.<br />
-                                    <strong
-                                        >2. Dark Mode Friendly Designs</strong
-                                    ><br />
-                                    More users are opting for dark mode.
-                                    Designing with flexible color schemes makes
-                                    your site more visually appealing.<br />
-                                    <strong>3. Minimalist Navigation</strong
-                                    ><br />
-                                    Mega menus are out. Sticky headers with
-                                    smart collapsible navs offer a streamlined,
-                                    mobile-first experience.<br />
-                                    <strong>4. Inclusive Design</strong><br />
-                                    Accessibility is no longer optional. High
-                                    contrast, alt text, keyboard nav—these
-                                    practices are now expected.<br />
-                                    <strong
-                                        >5. Bold Typography & Custom
-                                        Fonts</strong
-                                    ><br />
-                                    Large, branded text makes a lasting
-                                    impression. Just be sure to strike a balance
-                                    between readability and responsiveness.<br /><br />
-                                    Trends come and go, but the best ones
-                                    improve function and form. At Purposeful
-                                    Solutions, we help you embrace what’s next,
-                                    without losing what works.
+            <!-- ***** Blog Content Start ***** -->
+            <section class="section" id="blog-content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
+                            <article class="blog-article-content">
+                                <p class="intro-text">
+                                    The digital landscape evolves fast, and staying current can give
+                                    your brand a sharp competitive edge. Here's what's trending in
+                                    2025 — and why each trend matters for your online presence.
                                 </p>
-                                <a href="index.html#blog" class="main-button"
-                                    >Back</a
-                                >
-                            </div>
+
+                                <h2>1. Microinteractions</h2>
+                                <p>
+                                    Small animations — like button hover effects, form field feedback,
+                                    or subtle loading indicators — add polish and significantly enhance
+                                    user engagement. These tiny moments of delight communicate that
+                                    your site is alive, responsive, and well-crafted. Expect more brands
+                                    to invest in these details in 2025.
+                                </p>
+
+                                <h2>2. Dark Mode Friendly Designs</h2>
+                                <p>
+                                    More users are opting for dark mode across their devices. Designing
+                                    with flexible color schemes — including a thoughtful dark variant —
+                                    makes your site more visually comfortable and signals a modern,
+                                    user-first approach. It's no longer a nice-to-have; it's expected.
+                                </p>
+
+                                <h2>3. Minimalist Navigation</h2>
+                                <p>
+                                    Mega menus are out. Sticky headers with smart collapsible navigation
+                                    offer a streamlined, mobile-first experience. In 2025, the best
+                                    sites reduce cognitive load by making navigation feel invisible —
+                                    guiding users without getting in their way.
+                                </p>
+
+                                <h2>4. Inclusive Design</h2>
+                                <p>
+                                    Accessibility is no longer optional. High contrast ratios, descriptive
+                                    alt text, keyboard-navigable layouts, and screen-reader support are
+                                    now expected as baseline standards. Beyond compliance, inclusive design
+                                    simply reaches more people — and that means more potential customers.
+                                </p>
+
+                                <h2>5. Bold Typography & Custom Fonts</h2>
+                                <p>
+                                    Large, branded text makes a lasting visual impression and reinforces
+                                    identity without relying solely on imagery. Variable fonts and expressive
+                                    type pairings are having a major moment. Just be sure to balance
+                                    visual impact with readability across all screen sizes.
+                                </p>
+
+                                <p class="closing-text">
+                                    Trends come and go, but the best ones improve both function and form.
+                                    At Purposeful Solutions Web Design, we help you embrace what's next
+                                    without losing what already works for your brand. Want a site that's
+                                    built for today and tomorrow? <a href="index.html#contact-us">Let's talk.</a>
+                                </p>
+
+                                <div style="margin-top: 40px;">
+                                    <a href="index.html#blog" class="main-button">Back to Blogs</a>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- ***** Blog End ***** -->
+            </section>
+            <!-- ***** Blog Content End ***** -->
+        </main>
 
         <!-- ***** Footer Start ***** -->
         <footer>
@@ -237,18 +321,23 @@
                                 <a
                                     href="https://www.linkedin.com/company/purposefulsolutionswebdesign/services/?viewAsMember=true"
                                     target="_blank"
-                                    ><i class="fa fa-linkedin"></i
+                                    rel="noopener noreferrer"
+                                    aria-label="Visit our LinkedIn page (opens in new window)"
+                                    ><i class="fa fa-linkedin" aria-hidden="true"></i
                                 ></a>
                             </li>
                             <li>
                                 <a
                                     href="mailto:info@purposefulsolutionswebdesign.com"
-                                    ><i class="fa fa-envelope"></i
+                                    aria-label="Send us an email"
+                                    ><i class="fa fa-envelope" aria-hidden="true"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="tel:9157046261"
-                                    ><i class="fa fa-phone"></i
+                                <a
+                                    href="tel:9157046261"
+                                    aria-label="Call us at 915-704-6261"
+                                    ><i class="fa fa-phone" aria-hidden="true"></i
                                 ></a>
                             </li>
                         </ul>
@@ -256,29 +345,29 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
+                        <div style="text-align: center; margin-bottom: 20px">
+                            <img
+                                src="New_PSWD/assets/images/VEP_VOB_LOGO.png"
+                                alt="Veteran-Owned Business"
+                                style="height: 80px; margin-bottom: 5px; margin-top: 10px;"
+                            />
+                            <p style="color: #fff; font-size: 12px; margin: 0">
+                                Purposeful Solutions Web Design is a DBA of
+                                Twitty Enterprise LLC, proudly recognized as a
+                                Veteran-Owned Business by the Texas Veterans Commission.
+                            </p>
+                        </div>
                         <p class="copyright">
-                            Copyright &copy; 2025 Purposeful Solutions Web
-                            Design
+                            Copyright &copy; 2026 Purposeful Solutions Web Design
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+        <!-- ***** Footer End ***** -->
 
-        <!-- jQuery -->
-        <script src="New_PSWD/assets/js/jquery-2.1.0.min.js"></script>
-
-        <!-- Bootstrap -->
-        <script src="New_PSWD/assets/js/popper.js"></script>
-        <script src="New_PSWD/assets/js/bootstrap.min.js"></script>
-
-        <!-- Plugins -->
-        <script src="New_PSWD/assets/js/scrollreveal.min.js"></script>
-        <script src="New_PSWD/assets/js/waypoints.min.js"></script>
-        <script src="New_PSWD/assets/js/jquery.counterup.min.js"></script>
-        <script src="New_PSWD/assets/js/imgfix.min.js"></script>
-
-        <!-- Global Init -->
-        <script src="New_PSWD/assets/js/custom.js"></script>
+        <!-- Modern JavaScript -->
+        <script src="New_PSWD/assets/js/modern.min.js"></script>
+        <script src="New_PSWD/assets/js/modal.js"></script>
     </body>
 </html>

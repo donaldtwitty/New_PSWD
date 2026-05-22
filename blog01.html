@@ -6,18 +6,57 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta
+            name="description"
+            content="Learn five practical web design tips that instantly improve user experience, boost engagement, and help turn website visitors into clients."
+        />
+        <meta name="author" content="Purposeful Solutions Web Design" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph meta tags -->
+        <meta
+            property="og:title"
+            content="5 Web Design Tips That Instantly Improve User Experience | PSWD Blog"
+        />
+        <meta
+            property="og:description"
+            content="Learn five practical web design tips that instantly improve user experience, boost engagement, and help turn visitors into clients."
+        />
+        <meta
+            property="og:image"
+            content="https://purposefulsolutionswebdesign.com/New_PSWD/assets/images/webDesignConcept.jpg"
+        />
+        <meta
+            property="og:url"
+            content="https://purposefulsolutionswebdesign.com/blog01.html"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:site_name"
+            content="Purposeful Solutions Web Design"
+        />
+
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="5 Web Design Tips That Instantly Improve User Experience"
+        />
+        <meta
+            name="twitter:description"
+            content="Small changes that make a big difference. Learn how to improve your website's usability and engagement today."
+        />
+        <meta
+            name="twitter:image"
+            content="https://purposefulsolutionswebdesign.com/New_PSWD/assets/images/webDesignConcept.jpg"
+        />
+
         <link
             href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
             rel="stylesheet"
         />
 
-        <title>Softy Pinko - Bootstrap 4.0 Theme</title>
-        <!--
-    SOFTY PINKO
-    https://templatemo.com/tm-535-softy-pinko
-    -->
+        <title>5 Web Design Tips That Instantly Improve User Experience | Purposeful Solutions Web Design</title>
 
         <!-- Additional CSS Files -->
         <link
@@ -25,33 +64,92 @@
             type="text/css"
             href="New_PSWD/assets/css/bootstrap.min.css"
         />
-
         <link
             rel="stylesheet"
             type="text/css"
             href="New_PSWD/assets/css/font-awesome.css"
         />
-
         <link
             rel="stylesheet"
-            href="New_PSWD/assets/css/templatemo-softy-pinko.css"
+            href="New_PSWD/assets/css/templatemo-softy-pinko.min.css"
         />
+        <link rel="stylesheet" href="New_PSWD/assets/css/modal.css" />
+        <link rel="stylesheet" href="New_PSWD/assets/css/accessibility.css" />
+        <link rel="stylesheet" href="New_PSWD/assets/css/enhancements.css" />
+
+        <!-- Performance & Security Scripts -->
+        <script src="New_PSWD/assets/js/security.js" defer></script>
+        <script src="New_PSWD/assets/js/accessibility.js" defer></script>
+        <script src="New_PSWD/assets/js/analytics.js" defer></script>
 
         <link
             rel="icon"
             href="New_PSWD/assets/images/PSWDLogoFavicon.png"
             type="image/png"
         />
+        <link rel="manifest" href="/manifest.json" />
+
+        <!-- PWA Meta Tags -->
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="PSWD" />
+
+        <link
+            rel="canonical"
+            href="https://purposefulsolutionswebdesign.com/blog01.html"
+        />
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "5 Web Design Tips That Instantly Improve User Experience",
+                "description": "Learn five practical web design tips that instantly improve user experience, boost engagement, and help turn visitors into clients.",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Purposeful Solutions Web Design"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Purposeful Solutions Web Design",
+                    "url": "https://purposefulsolutionswebdesign.com"
+                },
+                "url": "https://purposefulsolutionswebdesign.com/blog01.html"
+            }
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-S0ZR6NHZ50"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-S0ZR6NHZ50');
+        </script>
     </head>
 
     <body>
+        <!-- ***** Skip Navigation ***** -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
         <!-- ***** Preloader Start ***** -->
-        <div id="preloader">
+        <div
+            id="preloader"
+            role="status"
+            aria-label="Loading content, please wait"
+            aria-live="polite"
+        >
             <div class="jumper">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
+            <span class="sr-only">Loading...</span>
         </div>
         <!-- ***** Preloader End ***** -->
 
@@ -60,52 +158,67 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <nav class="main-nav">
+                        <nav
+                            class="main-nav"
+                            role="navigation"
+                            aria-label="Main navigation"
+                        >
                             <!-- ***** Logo Start ***** -->
                             <a href="index.html#welcome" class="logo">
                                 <img
                                     src="New_PSWD/assets/images/PurposefulSolutionsWebDesignLogo2.png"
-                                    alt=""
+                                    alt="Purposeful Solutions Web Design Logo"
                                 />
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <li>
-                                    <a href="index.html#welcome" class="active"
-                                        >Home</a
+                            <ul class="nav" role="menubar">
+                                <li role="none">
+                                    <button
+                                        id="dark-mode-toggle"
+                                        aria-label="Toggle dark mode"
+                                        aria-pressed="false"
                                     >
+                                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                        <span class="sr-only">Toggle dark mode</span>
+                                    </button>
                                 </li>
-                                <li><a href="index.html#features">About</a></li>
-                                <li>
-                                    <a href="index.html#work-process"
-                                        >Process</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#welcome" role="menuitem">Home</a>
                                 </li>
-                                <li>
-                                    <a href="index.html#testimonials"
-                                        >Testimonials</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#features" role="menuitem">About</a>
                                 </li>
-                                <li>
-                                    <a href="index.html#our-services"
-                                        >Services</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#work-process" role="menuitem">Process</a>
                                 </li>
-                                <li><a href="index.html#blog">Blogs</a></li>
-                                <li>
-                                    <a href="index.html#contact-us"
-                                        >Contact Us</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#testimonials" role="menuitem">Testimonials</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#client-showcase" role="menuitem">Clients</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#our-services" role="menuitem">Services</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#pricing" role="menuitem">Pricing</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#blog" class="active" role="menuitem" aria-current="page">Blogs</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#contact-us" role="menuitem">Contact Us</a>
                                 </li>
                             </ul>
-                            <a
-                                href="#"
+                            <button
                                 class="menu-trigger"
                                 aria-label="Toggle site menu"
+                                aria-expanded="false"
+                                aria-controls="nav-menu"
                             >
                                 <span>Menu</span>
-                            </a>
+                            </button>
                             <!-- ***** Menu End ***** -->
                         </nav>
                     </div>
@@ -114,120 +227,88 @@
         </header>
         <!-- ***** Header Area End ***** -->
 
-        <!-- ***** Welcome Area Start ***** -->
-        <div
-            class="welcome-area"
-            id="welcome features, work-process, testimonials, our-services, blog, contact-us"
-        >
-            <!-- ***** Header Text Start ***** -->
-            <div class="header-text">
+        <main id="main-content">
+            <!-- ***** Blog Post Hero Start ***** -->
+            <div class="blog-post-hero">
                 <div class="container">
-                    <img
-                        src="New_PSWD/assets/images/PSWDLogoWhite.png"
-                        alt=""
-                    />
-                    <div class="row">
-                        <div
-                            class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12"
-                        >
-                            <h1>
-                                Web Design with <strong>Purpose</strong
-                                ><br />Results that <strong>Matter</strong>
-                            </h1>
-                            <p>
-                                We craft websites that elevate your brand,
-                                amplify your message, and help you reach your
-                                full potential.
-                            </p>
-                            <a
-                                href="index.html#contact-form"
-                                class="main-button-slider"
-                                >Let’s Build Your Site</a
-                            >
-                        </div>
-                    </div>
+                    <a href="index.html#blog" class="back-link">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Blogs
+                    </a>
+                    <h1>5 Web Design Tips That Instantly Improve User Experience</h1>
+                    <p class="blog-subtitle">Small changes that make a big difference.</p>
                 </div>
             </div>
-            <!-- ***** Header Text End ***** -->
-        </div>
-        <!-- ***** Welcome Area End ***** -->
+            <!-- ***** Blog Post Hero End ***** -->
 
-        <!-- ***** Blog Start ***** -->
-        <section class="section" id="blog">
-            <div class="container">
-                <!-- ***** Section Title Start ***** -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center">
-                            <h1 class="section-title">
-                                5 Web Design Tips That Instantly Improve User
-                                Experience
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Section Title End ***** -->
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
-                        <div class="blog-post-thumb">
-                            <div class="text-center">
-                                <h4>
-                                    <br />Small changes that make a big
-                                    difference.
-                                </h4>
-                            </div>
-                            <div class="blog-content text-justify">
-                                <p>
-                                    Your website is your first impression, and
-                                    attention spans are short. Here are five
-                                    simple yet impactful tips to improve your
-                                    site’s usability and engagement:
-                                    <br /><br />
-                                    <strong
-                                        >1. Prioritize Mobile
-                                        Responsiveness</strong
-                                    ><br />
-                                    Over 50% of global traffic is generated by
-                                    mobile devices. Ensure your site adapts to
-                                    all screen sizes and loads quickly on mobile
-                                    devices.<br />
-                                    <strong>2. Keep Navigation Simple</strong
-                                    ><br />
-                                    A clean, intuitive menu helps users quickly
-                                    find what they need. Limit top-level menu
-                                    items and use clear labels.<br />
-                                    <strong>3. Use Clear CTAs</strong><br />
-                                    Whether it’s “Contact Us,” “Download Now,”
-                                    or “Schedule a Demo,” your calls-to-action
-                                    should be visually distinct and
-                                    action-oriented.<br />
-                                    <strong>4. Optimize Page Load Speed</strong
-                                    ><br />
-                                    Compress images, utilize caching, and
-                                    minimize unnecessary scripts to maintain
-                                    load times under 3 seconds.<br />
-                                    <strong>5. Make Content Scannable</strong
-                                    ><br />
-                                    Use short paragraphs, bullet points, and
-                                    clear headings. Most users skim—make it easy
-                                    for them to digest your value quickly.<br /><br />
-                                    By following these tips, you’re not just
-                                    making your site more attractive—you’re
-                                    making it more effective. A better user
-                                    experience = better results.
+            <!-- ***** Blog Content Start ***** -->
+            <section class="section" id="blog-content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
+                            <article class="blog-article-content">
+                                <p class="intro-text">
+                                    Your website is your first impression, and attention spans are short.
+                                    Here are five simple yet impactful tips to improve your site's
+                                    usability and engagement — starting today.
                                 </p>
-                                <a href="index.html#blog" class="main-button"
-                                    >Back</a
-                                >
-                            </div>
+
+                                <h2>1. Prioritize Mobile Responsiveness</h2>
+                                <p>
+                                    Over 50% of global web traffic comes from mobile devices. A site
+                                    that looks great on a desktop but breaks on a phone loses half your
+                                    audience before they even read a word. Ensure your site adapts to
+                                    all screen sizes and loads quickly on mobile — this is non-negotiable.
+                                </p>
+
+                                <h2>2. Keep Navigation Simple</h2>
+                                <p>
+                                    A clean, intuitive menu helps users quickly find what they need.
+                                    Limit top-level menu items to five to seven choices, use clear
+                                    plain-language labels, and always provide a visible path back to
+                                    the home page. Confusion kills conversion.
+                                </p>
+
+                                <h2>3. Use Clear Calls-to-Action</h2>
+                                <p>
+                                    Whether it's "Contact Us," "Download Now," or "Schedule a Demo,"
+                                    your calls-to-action should be visually distinct and action-oriented.
+                                    Every page should have one primary CTA that tells the visitor exactly
+                                    what to do next. Don't make them guess.
+                                </p>
+
+                                <h2>4. Optimize Page Load Speed</h2>
+                                <p>
+                                    Compress images, utilize browser caching, and minimize unnecessary
+                                    scripts to maintain load times under 3 seconds. Users abandon sites
+                                    that take too long — and search engines penalize them too. Speed is
+                                    both a UX issue and an SEO issue.
+                                </p>
+
+                                <h2>5. Make Content Scannable</h2>
+                                <p>
+                                    Most users skim before they read. Use short paragraphs, bullet
+                                    points, and clear headings to let them quickly digest your value.
+                                    If your most important message is buried in a wall of text, it
+                                    might as well not be there.
+                                </p>
+
+                                <p class="closing-text">
+                                    By following these five tips, you're not just making your site more
+                                    attractive — you're making it more effective. A better user experience
+                                    equals better results. Ready to level up your site?
+                                    <a href="index.html#contact-us">Let's talk.</a>
+                                </p>
+
+                                <div style="margin-top: 40px;">
+                                    <a href="index.html#blog" class="main-button">Back to Blogs</a>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- ***** Blog End ***** -->
+            </section>
+            <!-- ***** Blog Content End ***** -->
+        </main>
 
         <!-- ***** Footer Start ***** -->
         <footer>
@@ -239,18 +320,23 @@
                                 <a
                                     href="https://www.linkedin.com/company/purposefulsolutionswebdesign/services/?viewAsMember=true"
                                     target="_blank"
-                                    ><i class="fa fa-linkedin"></i
+                                    rel="noopener noreferrer"
+                                    aria-label="Visit our LinkedIn page (opens in new window)"
+                                    ><i class="fa fa-linkedin" aria-hidden="true"></i
                                 ></a>
                             </li>
                             <li>
                                 <a
                                     href="mailto:info@purposefulsolutionswebdesign.com"
-                                    ><i class="fa fa-envelope"></i
+                                    aria-label="Send us an email"
+                                    ><i class="fa fa-envelope" aria-hidden="true"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="tel:9157046261"
-                                    ><i class="fa fa-phone"></i
+                                <a
+                                    href="tel:9157046261"
+                                    aria-label="Call us at 915-704-6261"
+                                    ><i class="fa fa-phone" aria-hidden="true"></i
                                 ></a>
                             </li>
                         </ul>
@@ -258,29 +344,29 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
+                        <div style="text-align: center; margin-bottom: 20px">
+                            <img
+                                src="New_PSWD/assets/images/VEP_VOB_LOGO.png"
+                                alt="Veteran-Owned Business"
+                                style="height: 80px; margin-bottom: 5px; margin-top: 10px;"
+                            />
+                            <p style="color: #fff; font-size: 12px; margin: 0">
+                                Purposeful Solutions Web Design is a DBA of
+                                Twitty Enterprise LLC, proudly recognized as a
+                                Veteran-Owned Business by the Texas Veterans Commission.
+                            </p>
+                        </div>
                         <p class="copyright">
-                            Copyright &copy; 2025 Purposeful Solutions Web
-                            Design
+                            Copyright &copy; 2026 Purposeful Solutions Web Design
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+        <!-- ***** Footer End ***** -->
 
-        <!-- jQuery -->
-        <script src="New_PSWD/assets/js/jquery-2.1.0.min.js"></script>
-
-        <!-- Bootstrap -->
-        <script src="New_PSWD/assets/js/popper.js"></script>
-        <script src="New_PSWD/assets/js/bootstrap.min.js"></script>
-
-        <!-- Plugins -->
-        <script src="New_PSWD/assets/js/scrollreveal.min.js"></script>
-        <script src="New_PSWD/assets/js/waypoints.min.js"></script>
-        <script src="New_PSWD/assets/js/jquery.counterup.min.js"></script>
-        <script src="New_PSWD/assets/js/imgfix.min.js"></script>
-
-        <!-- Global Init -->
-        <script src="New_PSWD/assets/js/custom.js"></script>
+        <!-- Modern JavaScript -->
+        <script src="New_PSWD/assets/js/modern.min.js"></script>
+        <script src="New_PSWD/assets/js/modal.js"></script>
     </body>
 </html>

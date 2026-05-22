@@ -6,18 +6,57 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta
+            name="description"
+            content="Discover the five foundational elements every great website shares — from clear purpose and seamless UX to consistent branding and SEO performance."
+        />
+        <meta name="author" content="Purposeful Solutions Web Design" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph meta tags -->
+        <meta
+            property="og:title"
+            content="What Makes a Website Great (Hint: It's Not Just the Design) | PSWD Blog"
+        />
+        <meta
+            property="og:description"
+            content="A beautiful site means nothing if it doesn't serve its purpose. Uncover the foundational elements every great website shares."
+        />
+        <meta
+            property="og:image"
+            content="https://purposefulsolutionswebdesign.com/New_PSWD/assets/images/webDesignLaptop.png"
+        />
+        <meta
+            property="og:url"
+            content="https://purposefulsolutionswebdesign.com/blog03.html"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:site_name"
+            content="Purposeful Solutions Web Design"
+        />
+
+        <!-- Twitter Card meta tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="What Makes a Website Great (Hint: It's Not Just the Design)"
+        />
+        <meta
+            name="twitter:description"
+            content="A beautiful site means nothing if it doesn't serve its purpose. Here's what truly defines a high-quality website."
+        />
+        <meta
+            name="twitter:image"
+            content="https://purposefulsolutionswebdesign.com/New_PSWD/assets/images/webDesignLaptop.png"
+        />
+
         <link
             href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
             rel="stylesheet"
         />
 
-        <title>Softy Pinko - Bootstrap 4.0 Theme</title>
-        <!--
-    SOFTY PINKO
-    https://templatemo.com/tm-535-softy-pinko
-    -->
+        <title>What Makes a Website Great (Hint: It's Not Just the Design) | Purposeful Solutions Web Design</title>
 
         <!-- Additional CSS Files -->
         <link
@@ -25,33 +64,92 @@
             type="text/css"
             href="New_PSWD/assets/css/bootstrap.min.css"
         />
-
         <link
             rel="stylesheet"
             type="text/css"
             href="New_PSWD/assets/css/font-awesome.css"
         />
-
         <link
             rel="stylesheet"
-            href="New_PSWD/assets/css/templatemo-softy-pinko.css"
+            href="New_PSWD/assets/css/templatemo-softy-pinko.min.css"
         />
+        <link rel="stylesheet" href="New_PSWD/assets/css/modal.css" />
+        <link rel="stylesheet" href="New_PSWD/assets/css/accessibility.css" />
+        <link rel="stylesheet" href="New_PSWD/assets/css/enhancements.css" />
+
+        <!-- Performance & Security Scripts -->
+        <script src="New_PSWD/assets/js/security.js" defer></script>
+        <script src="New_PSWD/assets/js/accessibility.js" defer></script>
+        <script src="New_PSWD/assets/js/analytics.js" defer></script>
 
         <link
             rel="icon"
             href="New_PSWD/assets/images/PSWDLogoFavicon.png"
             type="image/png"
         />
+        <link rel="manifest" href="/manifest.json" />
+
+        <!-- PWA Meta Tags -->
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="PSWD" />
+
+        <link
+            rel="canonical"
+            href="https://purposefulsolutionswebdesign.com/blog03.html"
+        />
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "What Makes a Website Great (Hint: It's Not Just the Design)",
+                "description": "Discover the five foundational elements every great website shares — from clear purpose to SEO performance.",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Purposeful Solutions Web Design"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Purposeful Solutions Web Design",
+                    "url": "https://purposefulsolutionswebdesign.com"
+                },
+                "url": "https://purposefulsolutionswebdesign.com/blog03.html"
+            }
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-S0ZR6NHZ50"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-S0ZR6NHZ50');
+        </script>
     </head>
 
     <body>
+        <!-- ***** Skip Navigation ***** -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
         <!-- ***** Preloader Start ***** -->
-        <div id="preloader">
+        <div
+            id="preloader"
+            role="status"
+            aria-label="Loading content, please wait"
+            aria-live="polite"
+        >
             <div class="jumper">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
+            <span class="sr-only">Loading...</span>
         </div>
         <!-- ***** Preloader End ***** -->
 
@@ -60,52 +158,67 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <nav class="main-nav">
+                        <nav
+                            class="main-nav"
+                            role="navigation"
+                            aria-label="Main navigation"
+                        >
                             <!-- ***** Logo Start ***** -->
                             <a href="index.html#welcome" class="logo">
                                 <img
                                     src="New_PSWD/assets/images/PurposefulSolutionsWebDesignLogo2.png"
-                                    alt=""
+                                    alt="Purposeful Solutions Web Design Logo"
                                 />
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <li>
-                                    <a href="index.html#welcome" class="active"
-                                        >Home</a
+                            <ul class="nav" role="menubar">
+                                <li role="none">
+                                    <button
+                                        id="dark-mode-toggle"
+                                        aria-label="Toggle dark mode"
+                                        aria-pressed="false"
                                     >
+                                        <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                        <span class="sr-only">Toggle dark mode</span>
+                                    </button>
                                 </li>
-                                <li><a href="index.html#features">About</a></li>
-                                <li>
-                                    <a href="index.html#work-process"
-                                        >Process</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#welcome" role="menuitem">Home</a>
                                 </li>
-                                <li>
-                                    <a href="index.html#testimonials"
-                                        >Testimonials</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#features" role="menuitem">About</a>
                                 </li>
-                                <li>
-                                    <a href="index.html#our-services"
-                                        >Services</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#work-process" role="menuitem">Process</a>
                                 </li>
-                                <li><a href="index.html#blog">Blogs</a></li>
-                                <li>
-                                    <a href="index.html#contact-us"
-                                        >Contact Us</a
-                                    >
+                                <li role="none">
+                                    <a href="index.html#testimonials" role="menuitem">Testimonials</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#client-showcase" role="menuitem">Clients</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#our-services" role="menuitem">Services</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#pricing" role="menuitem">Pricing</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#blog" class="active" role="menuitem" aria-current="page">Blogs</a>
+                                </li>
+                                <li role="none">
+                                    <a href="index.html#contact-us" role="menuitem">Contact Us</a>
                                 </li>
                             </ul>
-                            <a
-                                href="#"
+                            <button
                                 class="menu-trigger"
                                 aria-label="Toggle site menu"
+                                aria-expanded="false"
+                                aria-controls="nav-menu"
                             >
                                 <span>Menu</span>
-                            </a>
+                            </button>
                             <!-- ***** Menu End ***** -->
                         </nav>
                     </div>
@@ -114,118 +227,90 @@
         </header>
         <!-- ***** Header Area End ***** -->
 
-        <!-- ***** Welcome Area Start ***** -->
-        <div
-            class="welcome-area"
-            id="welcome features, work-process, testimonials, our-services, blog, contact-us"
-        >
-            <!-- ***** Header Text Start ***** -->
-            <div class="header-text">
+        <main id="main-content">
+            <!-- ***** Blog Post Hero Start ***** -->
+            <div class="blog-post-hero">
                 <div class="container">
-                    <img
-                        src="New_PSWD/assets/images/PSWDLogoWhite.png"
-                        alt=""
-                    />
-                    <div class="row">
-                        <div
-                            class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12"
-                        >
-                            <h1>
-                                Web Design with <strong>Purpose</strong
-                                ><br />Results that <strong>Matter</strong>
-                            </h1>
-                            <p>
-                                We craft websites that elevate your brand,
-                                amplify your message, and help you reach your
-                                full potential.
-                            </p>
-                            <a
-                                href="index.html#contact-form"
-                                class="main-button-slider"
-                                >Let’s Build Your Site</a
-                            >
-                        </div>
-                    </div>
+                    <a href="index.html#blog" class="back-link">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Blogs
+                    </a>
+                    <h1>What Makes a Website Great<br>(Hint: It's Not Just the Design)</h1>
+                    <p class="blog-subtitle">A beautiful site means nothing if it doesn't serve its purpose.</p>
                 </div>
             </div>
-            <!-- ***** Header Text End ***** -->
-        </div>
-        <!-- ***** Welcome Area End ***** -->
+            <!-- ***** Blog Post Hero End ***** -->
 
-        <!-- ***** Blog Start ***** -->
-        <section class="section" id="blog">
-            <div class="container">
-                <!-- ***** Section Title Start ***** -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center">
-                            <h1 class="section-title">
-                                What Makes a Website Great (Hint: It's Not Just
-                                the Design)
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Section Title End ***** -->
-
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
-                        <div class="blog-post-thumb">
-                            <div class="text-center">
-                                <h4>
-                                    <br />A beautiful site means nothing if it
-                                    doesn’t serve its purpose.
-                                </h4>
-                            </div>
-                            <div class="blog-content text-justify">
-                                <p>
-                                    Everyone wants a good-looking website, but
-                                    great websites do more than just look
-                                    good—they perform. Here’s what truly defines
-                                    a high-quality site: <br /><br />
-                                    <strong>1. Clear Purpose</strong><br />
-                                    Whether you’re selling products, booking
-                                    appointments, or building awareness, your
-                                    site should make that goal obvious.<br />
-                                    <strong>2. Seamless User Experience</strong
-                                    ><br />
-                                    Fast loading, logical navigation, and
-                                    intuitive layouts reduce frustration and
-                                    increase conversions.<br />
-                                    <strong>3. Strong Visual Hierarchy</strong
-                                    ><br />
-                                    Good design guides the eye. Utilize
-                                    contrast, size, and whitespace to
-                                    effectively prioritize content and guide
-                                    user action.<br />
-                                    <strong>4. Consistent Branding</strong
-                                    ><br />
-                                    Color, voice, typography—it all needs to
-                                    feel cohesive and aligned with your
-                                    identity.<br />
-                                    <strong
-                                        >5. SEO & Performance
-                                        Optimization</strong
-                                    ><br />
-                                    If it’s not findable, it’s not working.
-                                    Great sites are coded cleanly, load fast,
-                                    and rank well on search engines.<br /><br />
-                                    A great website is where beauty meets
-                                    function. It's the tool that turns visitors
-                                    into believers—and believers into customers.
+            <!-- ***** Blog Content Start ***** -->
+            <section class="section" id="blog-content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
+                            <article class="blog-article-content">
+                                <p class="intro-text">
+                                    Everyone wants a good-looking website, but great websites do more than
+                                    just look good — they perform. They guide visitors, build trust, and
+                                    drive action. Here's what truly defines a high-quality site.
                                 </p>
-                                <a href="index.html#blog" class="main-button"
-                                    >Back</a
-                                >
-                            </div>
+
+                                <h2>1. Clear Purpose</h2>
+                                <p>
+                                    Whether you're selling products, booking appointments, building community
+                                    awareness, or sharing your ministry — your site should make that goal
+                                    obvious within seconds of landing on it. If a visitor has to dig to
+                                    understand what you do, you've already lost them. Every page should have
+                                    one clear job.
+                                </p>
+
+                                <h2>2. Seamless User Experience</h2>
+                                <p>
+                                    Fast loading, logical navigation, and intuitive layouts reduce frustration
+                                    and increase conversions. Great UX isn't just about aesthetics — it's
+                                    about removing every possible obstacle between your visitor and your goal.
+                                    Think of your website as a path, not a puzzle.
+                                </p>
+
+                                <h2>3. Strong Visual Hierarchy</h2>
+                                <p>
+                                    Good design guides the eye. Using contrast, size, whitespace, and color
+                                    intentionally — not decoratively — tells visitors where to look and what
+                                    to do next. A cluttered page with no clear focal point leaves visitors
+                                    unsure and disengaged. Visual hierarchy is silent leadership.
+                                </p>
+
+                                <h2>4. Consistent Branding</h2>
+                                <p>
+                                    Color palette, voice, typography, imagery — it all needs to feel cohesive
+                                    and aligned with your identity. Inconsistency erodes trust. A brand that
+                                    looks one way on social media and another way on its website creates
+                                    confusion. Great websites feel like a natural extension of who you are.
+                                </p>
+
+                                <h2>5. SEO & Performance Optimization</h2>
+                                <p>
+                                    If your site isn't findable, it isn't working. Great websites are coded
+                                    cleanly, load in under 3 seconds, use proper heading structures, and
+                                    target the right keywords. Search engine optimization isn't a bonus
+                                    feature — it's the bridge between your site and the people who need you.
+                                </p>
+
+                                <p class="closing-text">
+                                    A great website is where beauty meets function. It's the tool that turns
+                                    curious visitors into believers — and believers into loyal clients. At
+                                    Purposeful Solutions Web Design, we build with all five of these elements
+                                    in mind from day one. Ready to build something great?
+                                    <a href="index.html#contact-us">Start here.</a>
+                                </p>
+
+                                <div style="margin-top: 40px;">
+                                    <a href="index.html#blog" class="main-button">Back to Blogs</a>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- ***** Blog End ***** -->
+            </section>
+            <!-- ***** Blog Content End ***** -->
+        </main>
 
         <!-- ***** Footer Start ***** -->
         <footer>
@@ -237,18 +322,23 @@
                                 <a
                                     href="https://www.linkedin.com/company/purposefulsolutionswebdesign/services/?viewAsMember=true"
                                     target="_blank"
-                                    ><i class="fa fa-linkedin"></i
+                                    rel="noopener noreferrer"
+                                    aria-label="Visit our LinkedIn page (opens in new window)"
+                                    ><i class="fa fa-linkedin" aria-hidden="true"></i
                                 ></a>
                             </li>
                             <li>
                                 <a
                                     href="mailto:info@purposefulsolutionswebdesign.com"
-                                    ><i class="fa fa-envelope"></i
+                                    aria-label="Send us an email"
+                                    ><i class="fa fa-envelope" aria-hidden="true"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="tel:9157046261"
-                                    ><i class="fa fa-phone"></i
+                                <a
+                                    href="tel:9157046261"
+                                    aria-label="Call us at 915-704-6261"
+                                    ><i class="fa fa-phone" aria-hidden="true"></i
                                 ></a>
                             </li>
                         </ul>
@@ -256,29 +346,29 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
+                        <div style="text-align: center; margin-bottom: 20px">
+                            <img
+                                src="New_PSWD/assets/images/VEP_VOB_LOGO.png"
+                                alt="Veteran-Owned Business"
+                                style="height: 80px; margin-bottom: 5px; margin-top: 10px;"
+                            />
+                            <p style="color: #fff; font-size: 12px; margin: 0">
+                                Purposeful Solutions Web Design is a DBA of
+                                Twitty Enterprise LLC, proudly recognized as a
+                                Veteran-Owned Business by the Texas Veterans Commission.
+                            </p>
+                        </div>
                         <p class="copyright">
-                            Copyright &copy; 2025 Purposeful Solutions Web
-                            Design
+                            Copyright &copy; 2026 Purposeful Solutions Web Design
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+        <!-- ***** Footer End ***** -->
 
-        <!-- jQuery -->
-        <script src="New_PSWD/assets/js/jquery-2.1.0.min.js"></script>
-
-        <!-- Bootstrap -->
-        <script src="New_PSWD/assets/js/popper.js"></script>
-        <script src="New_PSWD/assets/js/bootstrap.min.js"></script>
-
-        <!-- Plugins -->
-        <script src="New_PSWD/assets/js/scrollreveal.min.js"></script>
-        <script src="New_PSWD/assets/js/waypoints.min.js"></script>
-        <script src="New_PSWD/assets/js/jquery.counterup.min.js"></script>
-        <script src="New_PSWD/assets/js/imgfix.min.js"></script>
-
-        <!-- Global Init -->
-        <script src="New_PSWD/assets/js/custom.js"></script>
+        <!-- Modern JavaScript -->
+        <script src="New_PSWD/assets/js/modern.min.js"></script>
+        <script src="New_PSWD/assets/js/modal.js"></script>
     </body>
 </html>
