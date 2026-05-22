@@ -339,3 +339,140 @@
 .pricing-note a:hover {
     color: #120037;
 }
+
+/* ------ Service Pages ------ */
+.service-deliverables {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.service-deliverables li {
+    padding: 11px 0 11px 34px;
+    position: relative;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.service-deliverables li:last-child {
+    border-bottom: none;
+}
+
+.service-deliverables li::before {
+    content: '\f00c';
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    top: 13px;
+    color: #8261ee;
+    font-size: 13px;
+}
+
+.service-step-card {
+    background: #fff;
+    border: 1px solid #f0ecff;
+    border-radius: 12px;
+    padding: 30px 24px;
+    text-align: center;
+    height: 100%;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.service-step-card:hover {
+    box-shadow: 0 4px 20px rgba(130, 97, 238, 0.12);
+}
+
+.service-step-card .step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 auto 16px;
+}
+
+.service-step-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #120037;
+    margin: 0 0 10px;
+}
+
+.service-step-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.related-work-placeholder {
+    border: 2px dashed #d8ccff;
+    border-radius: 12px;
+    padding: 60px 24px;
+    text-align: center;
+    background: #faf8ff;
+}
+
+.related-work-placeholder p {
+    color: #999;
+    font-size: 15px;
+    margin: 0;
+}
+
+.related-work-placeholder .placeholder-label {
+    display: inline-block;
+    background: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.mini .info h2 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Dark mode — service pages */
+[data-theme='dark'] .service-deliverables li {
+    color: #ccc;
+    border-bottom-color: #2a2a2a;
+}
+
+[data-theme='dark'] .service-step-card {
+    background: #1e1e2e;
+    border-color: #2a2a3a;
+}
+
+[data-theme='dark'] .service-step-card h3 {
+    color: #f0f0f0;
+}
+
+[data-theme='dark'] .service-step-card p {
+    color: #aaa;
+}
+
+[data-theme='dark'] .related-work-placeholder {
+    border-color: #3a3a5a;
+    background: #1a1a2a;
+}
+
+[data-theme='dark'] .related-work-placeholder p {
+    color: #888;
+}
