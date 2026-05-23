@@ -8,7 +8,6 @@ Sitemap: https://purposefulsolutionswebdesign.com/sitemap.xml
 Crawl-delay: 1
 
 # Block sensitive areas
-Disallow: /New_PSWD/assets/js/
 Disallow: /__tests__/
 Disallow: /node_modules/
 Disallow: /coverage/

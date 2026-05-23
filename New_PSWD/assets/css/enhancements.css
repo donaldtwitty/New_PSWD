@@ -607,6 +607,14 @@
     gap: 10px;
 }
 
+/* Footer social icon centering */
+footer .social li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+
 /* ------ Case Study Hero ------ */
 .case-study-hero {
     background: linear-gradient(135deg, #120037 0%, #8261ee 100%);
