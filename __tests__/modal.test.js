@@ -4,7 +4,7 @@
 
 // Mock DOM elements
 document.body.innerHTML = `
-  <div id="dc-modal" style="display: none;"></div>
+  <div id="dc-modal" class="js-hidden"></div>
 `;
 
 // Load and execute modal.js
@@ -21,56 +21,55 @@ describe('Modal Functions', () => {
 
     beforeEach(() => {
         modal = document.getElementById('dc-modal');
-        modal.style.display = 'none';
+        modal.classList.add('js-hidden');
     });
 
     test('openDCModal shows the modal', () => {
         openDCModal();
-        expect(modal.style.display).toBe('flex');
+        expect(modal.classList.contains('js-hidden')).toBe(false);
     });
 
     test('closeDCModal hides the modal', () => {
-        modal.style.display = 'flex';
+        modal.classList.remove('js-hidden');
         closeDCModal();
-        expect(modal.style.display).toBe('none');
+        expect(modal.classList.contains('js-hidden')).toBe(true);
     });
 
     test('clicking outside modal closes it', () => {
-        modal.style.display = 'flex';
+        modal.classList.remove('js-hidden');
         const clickEvent = new MouseEvent('click');
         Object.defineProperty(clickEvent, 'target', { value: modal });
         window.dispatchEvent(clickEvent);
-        expect(modal.style.display).toBe('none');
+        expect(modal.classList.contains('js-hidden')).toBe(true);
     });
 
     test('clicking inside modal does not close it', () => {
-        modal.style.display = 'flex';
+        modal.classList.remove('js-hidden');
         const clickEvent = new MouseEvent('click');
         Object.defineProperty(clickEvent, 'target', {
             value: document.createElement('div'),
         });
         window.dispatchEvent(clickEvent);
-        expect(modal.style.display).toBe('flex');
+        expect(modal.classList.contains('js-hidden')).toBe(false);
     });
 
     test('escape key closes modal when visible', () => {
-        modal.style.display = 'flex';
+        modal.classList.remove('js-hidden');
         const escapeEvent = new KeyboardEvent('keydown', { key: 'Escape' });
         window.dispatchEvent(escapeEvent);
-        expect(modal.style.display).toBe('none');
+        expect(modal.classList.contains('js-hidden')).toBe(true);
     });
 
     test('escape key does nothing when modal hidden', () => {
-        modal.style.display = 'none';
         const escapeEvent = new KeyboardEvent('keydown', { key: 'Escape' });
         window.dispatchEvent(escapeEvent);
-        expect(modal.style.display).toBe('none');
+        expect(modal.classList.contains('js-hidden')).toBe(true);
     });
 
     test('other keys do not close modal', () => {
-        modal.style.display = 'flex';
+        modal.classList.remove('js-hidden');
         const enterEvent = new KeyboardEvent('keydown', { key: 'Enter' });
         window.dispatchEvent(enterEvent);
-        expect(modal.style.display).toBe('flex');
+        expect(modal.classList.contains('js-hidden')).toBe(false);
     });
 });
