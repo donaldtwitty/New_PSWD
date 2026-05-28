@@ -85,13 +85,29 @@ document.addEventListener('DOMContentLoaded', function () {
     if (form) {
         form.addEventListener('submit', async function (e) {
             e.preventDefault();
+
+            // Rate limiting — block rapid resubmissions
+            if (window.PSWD_Security && window.PSWD_Security.isRateLimited()) {
+                alert('Please wait a moment before submitting again.');
+                return;
+            }
+
+            // Sanitize text fields before sending
+            const sanitize = window.PSWD_Security
+                ? window.PSWD_Security.sanitizeInput
+                : (v) => v;
             const formData = new FormData(form);
+            const sanitized = new FormData();
+            for (const [key, value] of formData.entries()) {
+                sanitized.append(key, typeof value === 'string' ? sanitize(value) : value);
+            }
+
             try {
                 const response = await fetch(
                     'https://formspree.io/f/xzzrnyzr',
                     {
                         method: 'POST',
-                        body: formData,
+                        body: sanitized,
                         headers: { Accept: 'application/json' },
                     }
                 );

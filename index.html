@@ -163,7 +163,25 @@
                 "sameAs": [
                     "https://www.linkedin.com/company/purposefulsolutionswebdesign/"
                 ],
-                "founder": "Donald C. Twitty Jr."
+                "founder": "Donald C. Twitty Jr.",
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                        "opens": "10:00",
+                        "closes": "16:00"
+                    }
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Web Design Services",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Web Design" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Maintenance" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Identity" } }
+                    ]
+                }
             }
         </script>
 
@@ -454,10 +472,12 @@
                             data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
                         >
                             <img
-                                src="New_PSWD/assets/images/left-image.png"
-                                class="rounded img-fluid d-block mx-auto"
-                                alt="Web design and development illustration"
-                                loading="lazy"
+                                src="New_PSWD/assets/images/_MG_1227_.jpg"
+                                class="founder-headshot img-fluid d-block mx-auto"
+                                alt="Donald C. Twitty Jr., Founder of Purposeful Solutions Web Design"
+                                width="420"
+                                height="560"
+                                loading="eager"
                             />
                         </div>
                         <div class="col-lg-1"></div>
@@ -659,7 +679,6 @@
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="team-item">
                                 <div class="team-content">
-                                    <span class="testimonial-stars" aria-label="5 stars">★★★★★</span>
                                     <p>
                                         Purposeful Solutions’ superpower is its
                                         ability to listen attentively and truly
@@ -680,6 +699,7 @@
                                         <div class="testimonial-author">
                                             <h3 class="user-name">Derreka Lowe, MBA</h3>
                                             <span>Philadelphia Seventh-day Adventist Church</span>
+                                            <span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span>
                                         </div>
                                     </div>
                                 </div>
@@ -691,7 +711,6 @@
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="team-item">
                                 <div class="team-content">
-                                    <span class="testimonial-stars" aria-label="5 stars">★★★★★</span>
                                     <p>
                                         When I contacted Purposeful Solutions, I
                                         had been through several developers who
@@ -716,6 +735,7 @@
                                         <div class="testimonial-author">
                                             <h3 class="user-name">Patricia Corbitt, D.Min</h3>
                                             <span>Perpetual Praise Covenant Church</span>
+                                            <span class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1036,6 +1056,7 @@
                             <div class="pricing-item">
                                 <div class="pricing-header">
                                     <div class="pricing-title">Starter</div>
+                                    <p class="pricing-ideal">Ideal for new businesses that need a clean, professional web presence fast.</p>
                                 </div>
                                 <div class="pricing-body">
                                     <div class="price-wrapper">
@@ -1064,6 +1085,7 @@
                                 <div class="pricing-header">
                                     <span class="pricing-badge">Most Popular</span>
                                     <div class="pricing-title">Professional</div>
+                                    <p class="pricing-ideal">For growing organizations that need a custom design, stronger SEO, and ongoing support.</p>
                                 </div>
                                 <div class="pricing-body">
                                     <div class="price-wrapper">
@@ -1091,6 +1113,7 @@
                             <div class="pricing-item">
                                 <div class="pricing-header">
                                     <div class="pricing-title">Enterprise</div>
+                                    <p class="pricing-ideal">For complex builds — portals, custom platforms, e-commerce, or multi-phase projects.</p>
                                 </div>
                                 <div class="pricing-body">
                                     <div class="price-wrapper">

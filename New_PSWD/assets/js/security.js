@@ -21,16 +21,16 @@
         return div.innerHTML;
     }
 
-    // Rate limiting for form submissions
-    let lastSubmission = 0;
-    const RATE_LIMIT = 5000; // 5 seconds
+    // Rate limiting for form submissions (persists across page refreshes via sessionStorage)
+    const RATE_LIMIT = 10000; // 10 seconds
 
     function isRateLimited() {
         const now = Date.now();
-        if (now - lastSubmission < RATE_LIMIT) {
+        const last = parseInt(sessionStorage.getItem('pswd_last_submit') || '0', 10);
+        if (now - last < RATE_LIMIT) {
             return true;
         }
-        lastSubmission = now;
+        sessionStorage.setItem('pswd_last_submit', now.toString());
         return false;
     }
 
