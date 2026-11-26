@@ -1,22 +1,13 @@
-const CACHE_NAME = 'pswd-v1';
-const urlsToCache = [
-    '/',
-    '/New_PSWD/assets/css/bootstrap.min.css',
-    '/New_PSWD/assets/css/templatemo-softy-pinko.min.css',
-    '/New_PSWD/assets/js/custom.js',
-    '/New_PSWD/assets/js/modal.js'
-];
-
-self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => cache.addAll(urlsToCache))
-    );
-});
-
-self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => response || fetch(event.request))
-    );
+// Retired. The previous site registered a cache-first service worker here.
+// This version clears its caches and unregisters itself so returning visitors
+// get the current site. Safe to delete after a few months (mid-2027).
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.map((k) => caches.delete(k)));
+    await self.registration.unregister();
+    const clients = await self.clients.matchAll({ type: 'window' });
+    clients.forEach((c) => c.navigate(c.url));
+  })());
 });
