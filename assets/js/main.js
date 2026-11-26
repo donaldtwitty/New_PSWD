@@ -1,38 +1,104 @@
-// Purposeful Solutions Web Design: contact form
-// The form builds an email for the visitor to send. To have it submit directly,
-// replace the submit handler below with a POST to your form handler.
-(function(){
-  var form=document.getElementById('lead');
-  if(!form)return;
-  var res=document.getElementById('result'),
-      msgEl=document.getElementById('result-msg'),txt=document.getElementById('result-text'),
-      mail=document.getElementById('mail-link'),copy=document.getElementById('copy-btn'),
-      need=document.getElementById('need');
+/**
+ * Contact form (contact.html)
+ *
+ * The site is static, so the form does not send anything by itself. On
+ * submit it checks the name and email, builds a plain-text request, and
+ * offers two ways to send it: open the visitor's email app, or copy the text.
+ *
+ * To have the form submit directly later, replace handleSubmit with a
+ * request to a form service.
+ */
+(function () {
+    'use strict';
 
-  // pricing.html links here as contact.html?package=Starter|Standard|Pro
-  var pkg=new URLSearchParams(location.search).get('package');
-  if(pkg){
-    Array.prototype.forEach.call(need.options,function(o){if(o.text===pkg+' website')need.value=o.value;});
-  }
+    const CONTACT_EMAIL = 'info@purposefulsolutionswebdesign.com';
+    const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var v=function(id){return document.getElementById(id).value.trim();};
-    res.classList.add('on');
-    if(!v('name')||!/^\S+@\S+\.\S+$/.test(v('email'))){
-      msgEl.textContent='Add your name and a valid email address so we can reply.';
-      txt.textContent='';mail.style.display=copy.style.display='none';return;
+    const form = document.getElementById('lead');
+    if (!form) {
+        return;
     }
-    var body='Name: '+v('name')+'\nEmail: '+v('email')+'\nOrganization: '+v('org')+'\nNeed: '+v('need')+
-      '\nCurrent site: '+(v('url')||'none')+'\n\n'+(v('msg')||'(no details added)');
-    txt.textContent=body;
-    mail.style.display=copy.style.display='';
-    mail.href='mailto:info@purposefulsolutionswebdesign.com?subject='+encodeURIComponent(v('need')+' request from '+v('name'))+'&body='+encodeURIComponent(body);
-    msgEl.textContent='Your request is ready. Send it from your email app, or copy it and email info@purposefulsolutionswebdesign.com.';
-  });
 
-  copy.addEventListener('click',function(){
-    try{navigator.clipboard.writeText(txt.textContent).then(function(){copy.textContent='Copied';},function(){copy.textContent='Select the text above to copy';});}
-    catch(err){copy.textContent='Select the text above to copy';}
-  });
+    const result = document.getElementById('result');
+    const resultMessage = document.getElementById('result-msg');
+    const resultText = document.getElementById('result-text');
+    const mailLink = document.getElementById('mail-link');
+    const copyButton = document.getElementById('copy-btn');
+    const needSelect = document.getElementById('need');
+
+    function fieldValue(id) {
+        return document.getElementById(id).value.trim();
+    }
+
+    function setSendOptionsVisible(visible) {
+        mailLink.hidden = !visible;
+        copyButton.hidden = !visible;
+    }
+
+    // pricing.html links here as contact.html?package=Starter|Standard|Pro
+    function preselectPackage() {
+        const pkg = new URLSearchParams(window.location.search).get('package');
+        if (!pkg) {
+            return;
+        }
+        const match = Array.from(needSelect.options).find(
+            (option) => option.text === `${pkg} website`
+        );
+        if (match) {
+            needSelect.value = match.value;
+        }
+    }
+
+    function buildRequest() {
+        return [
+            `Name: ${fieldValue('name')}`,
+            `Email: ${fieldValue('email')}`,
+            `Organization: ${fieldValue('org')}`,
+            `Need: ${fieldValue('need')}`,
+            `Current site: ${fieldValue('url') || 'none'}`,
+            '',
+            fieldValue('msg') || '(no details added)',
+        ].join('\n');
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        result.classList.add('is-visible');
+
+        const name = fieldValue('name');
+        const email = fieldValue('email');
+
+        if (!name || !EMAIL_PATTERN.test(email)) {
+            resultMessage.textContent = 'Add your name and a valid email address so we can reply.';
+            resultText.textContent = '';
+            setSendOptionsVisible(false);
+            return;
+        }
+
+        const body = buildRequest();
+        const subject = `${fieldValue('need')} request from ${name}`;
+
+        resultText.textContent = body;
+        mailLink.href =
+            `mailto:${CONTACT_EMAIL}` +
+            `?subject=${encodeURIComponent(subject)}` +
+            `&body=${encodeURIComponent(body)}`;
+        resultMessage.textContent =
+            `Your request is ready. Send it from your email app, ` +
+            `or copy it and email ${CONTACT_EMAIL}.`;
+        setSendOptionsVisible(true);
+    }
+
+    async function handleCopy() {
+        try {
+            await navigator.clipboard.writeText(resultText.textContent);
+            copyButton.textContent = 'Copied';
+        } catch (error) {
+            copyButton.textContent = 'Select the text above to copy';
+        }
+    }
+
+    preselectPackage();
+    form.addEventListener('submit', handleSubmit);
+    copyButton.addEventListener('click', handleCopy);
 })();

@@ -18,6 +18,22 @@ New_PSWD/assets/images/   legacy paths still used by email signatures; remove on
 google139b1757fc4b402e.html  Google Search Console verification, keep
 ```
 
+## Code conventions
+
+- **HTML:** semantic elements (`header`, `main`, `section`, `footer`), one `h1` per page, headings in
+  order. Every image has `alt`, `width` and `height`; images below the fold use `loading="lazy"`.
+  Each page repeats the same header and footer, so update all five pages when either changes.
+- **CSS:** one file, `assets/css/styles.css`, organized in numbered sections listed at the top.
+  Colors, fonts and sizes are CSS variables in section 1. Class names are descriptive, and
+  variants use a double dash (`.btn--ghost`, `.section--tight`, `.tier--featured`).
+- **JavaScript:** only `assets/js/main.js`, for the contact form. No build step or dependencies.
+- **Formatting:** Prettier (`.prettierrc`) and EditorConfig. Check before committing:
+
+    ```
+    npx prettier@3 --check "*.html" "assets/**/*.{css,js}"
+    npx html-validate@8 *.html
+    ```
+
 ## Workflow
 
 1. Branch from `main` for each change (`git switch -c feature/short-name`).
