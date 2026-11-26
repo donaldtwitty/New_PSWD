@@ -369,6 +369,75 @@ h3 {
     font-size: 0.92rem;
 }
 
+/* Compact menu button, shown on small screens only (see section 6) */
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    border: 1px solid var(--band-line);
+    border-radius: var(--radius-small);
+    background: transparent;
+    color: var(--band-ink);
+    font: 600 0.92rem var(--font-body);
+    cursor: pointer;
+}
+
+/* Three bars drawn with the span and its two pseudo-elements */
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.menu-icon {
+    position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -6px;
+}
+
+.menu-icon::after {
+    top: 6px;
+}
+
+/* Bars turn into an X while the menu is open */
+.menu-toggle[aria-expanded='true'] .menu-icon {
+    background: transparent;
+}
+
+.menu-toggle[aria-expanded='true'] .menu-icon::before {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded='true'] .menu-icon::after {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-icon,
+    .menu-icon::before,
+    .menu-icon::after {
+        transition: none;
+    }
+}
+
 /* Site footer */
 
 .closer {
@@ -1083,6 +1152,35 @@ details p {
 
     .founder {
         max-width: 260px;
+    }
+}
+
+/* Compact menu: only when JavaScript is running, so links never get stuck hidden */
+@media (max-width: 720px) {
+    .js .menu-toggle {
+        display: inline-flex;
+    }
+
+    .js .main-nav {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding: 6px 0 4px;
+    }
+
+    .js .main-nav.is-open {
+        display: flex;
+    }
+
+    .js .main-nav a {
+        padding: 12px;
+    }
+
+    .js .main-nav a.btn {
+        margin: 8px 0 0;
+        padding: 12px 16px;
     }
 }
 

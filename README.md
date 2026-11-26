@@ -8,7 +8,8 @@ Source for [purposefulsolutionswebdesign.com](https://purposefulsolutionswebdesi
 index.html  services.html  pricing.html  contact.html  404.html
 assets/
   css/styles.css   all styles (light and dark themes via CSS variables)
-  js/main.js       contact form (builds an email for the visitor to send)
+  js/nav.js        compact menu on small screens
+  js/contact-form.js  contact form (builds an email for the visitor to send)
   img/             every image the site uses, plus favicon and social share image
 CNAME              custom domain for GitHub Pages
 sitemap.xml, robots.txt
@@ -26,7 +27,8 @@ google139b1757fc4b402e.html  Google Search Console verification, keep
 - **CSS:** one file, `assets/css/styles.css`, organized in numbered sections listed at the top.
   Colors, fonts and sizes are CSS variables in section 1. Class names are descriptive, and
   variants use a double dash (`.btn--ghost`, `.section--tight`, `.tier--featured`).
-- **JavaScript:** only `assets/js/main.js`, for the contact form. No build step or dependencies.
+- **JavaScript:** `assets/js/nav.js` (compact menu, every page) and `assets/js/contact-form.js`
+  (contact page). No build step or dependencies.
 - **Formatting:** Prettier (`.prettierrc`) and EditorConfig. Check before committing:
 
     ```

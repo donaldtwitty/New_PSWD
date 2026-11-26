@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <script>
+            document.documentElement.classList.add('js');
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Veteran-Owned Web Design in San Antonio | Purposeful Solutions</title>
         <meta
@@ -83,7 +86,16 @@
                         <span class="brand-tagline">Web Design</span>
                     </span>
                 </a>
-                <nav class="main-nav" aria-label="Main">
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-nav"
+                >
+                    <span class="menu-icon" aria-hidden="true"></span>
+                    Menu
+                </button>
+                <nav id="site-nav" class="main-nav" aria-label="Main">
                     <a href="index.html" aria-current="page">Home</a>
                     <a href="services.html">Services</a>
                     <a href="pricing.html">Pricing</a>
@@ -422,5 +434,6 @@
                 </span>
             </div>
         </footer>
+        <script src="assets/js/nav.js" defer></script>
     </body>
 </html>
