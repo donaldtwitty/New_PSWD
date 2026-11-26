@@ -25,5 +25,12 @@
     <div class="container footer-legal">
         <span>© {% year %} {{ site.name }}, a DBA of {{ site.legalName }}.</span>
         <span>Recognized as a Veteran-Owned Business by the Texas Veterans Commission.</span>
+        <span class="footer-links">
+            <a href="/privacy.html">Privacy policy</a>
+            {%- if site.googleBusinessUrl %}
+            <a href="{{ site.googleBusinessUrl }}">Google reviews</a>
+            {%- endif %}
+            <a href="{{ site.linkedInUrl }}">LinkedIn</a>
+        </span>
     </div>
 </footer>

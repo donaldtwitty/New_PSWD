@@ -42,6 +42,17 @@ eleventy.config.js        build settings
 
 `_site/` and `node_modules/` are generated and not committed.
 
+## Settings in `src/_data/site.json`
+
+Some features turn on when their setting is filled in:
+
+| Setting                     | What it turns on                                                                                                        |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `contactForm.accessKey`     | Contact form sends straight to the inbox ([Web3Forms](https://web3forms.com) key). Empty: opens the visitor's email app |
+| `analytics.goatcounterCode` | Privacy-friendly visit counts ([GoatCounter](https://www.goatcounter.com), the part before `.goatcounter.com`)          |
+| `bookingUrl`                | "Book a free call" button and contact page link (Zoho Bookings page)                                                    |
+| `googleBusinessUrl`         | "Google reviews" footer link and the business details Google reads                                                      |
+
 ## Common changes
 
 - **Phone, email, menu or footer links:** edit `src/_data/site.json`. Every page updates.

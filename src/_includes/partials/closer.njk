@@ -2,6 +2,11 @@
 <div class="band closer" id="closer">
     <div class="container">
         <h2>Ready to see what your site could do?</h2>
-        <a class="btn" href="{{ site.cta.url }}">Get a free site review</a>
+        <div class="cta-row">
+            <a class="btn" href="{{ site.cta.url }}">Get a free site review</a>
+            {%- if site.bookingUrl %}
+            <a class="btn btn--ghost" href="{{ site.bookingUrl }}">Book a free call</a>
+            {%- endif %}
+        </div>
     </div>
 </div>

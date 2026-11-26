@@ -38,6 +38,14 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/assets/css/styles.css" />
+        {%- if site.analytics.goatcounterCode %}
+        {# Privacy-friendly visit counts: no cookies, no personal data #}
+        <script
+            data-goatcounter="https://{{ site.analytics.goatcounterCode }}.goatcounter.com/count"
+            async
+            src="https://gc.zgo.at/count.js"
+        ></script>
+        {%- endif %}
         {%- if structuredData %}
         {% include "partials/structured-data.njk" %}
         {%- endif %}

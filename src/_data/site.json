@@ -8,6 +8,18 @@
     "legalName": "Twitty Enterprise LLC",
     "themeColor": "#150F33",
     "shareImage": "/assets/img/og-image.png",
+
+    "contactForm": {
+        "endpoint": "https://api.web3forms.com/submit",
+        "accessKey": ""
+    },
+    "analytics": {
+        "goatcounterCode": ""
+    },
+    "bookingUrl": "",
+    "googleBusinessUrl": "",
+    "linkedInUrl": "https://www.linkedin.com/company/purposefulsolutionswebdesign/",
+
     "nav": [
         { "label": "Home", "url": "/" },
         { "label": "Services", "url": "/services.html" },
@@ -15,7 +27,6 @@
     ],
     "cta": { "label": "Free site review", "url": "/contact.html" },
     "footerNav": [
-        { "label": "Home", "url": "/" },
         { "label": "Services", "url": "/services.html" },
         { "label": "Pricing", "url": "/pricing.html" },
         { "label": "Contact", "url": "/contact.html" }

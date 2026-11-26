@@ -19,6 +19,9 @@
         "areaServed": "San Antonio, Texas",
         "founder": { "@type": "Person", "name": "Donald C. Twitty, Jr." },
         "parentOrganization": { "@type": "Organization", "name": "{{ site.legalName }}" },
-        "sameAs": ["https://www.linkedin.com/company/purposefulsolutionswebdesign/"]
+        "sameAs": [
+            "{{ site.linkedInUrl }}"
+            {%- if site.googleBusinessUrl %}, "{{ site.googleBusinessUrl }}"{% endif %}
+        ]
     }
 </script>

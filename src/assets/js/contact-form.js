@@ -1,17 +1,15 @@
 /**
  * Contact form (contact.html)
  *
- * The site is static, so the form does not send anything by itself. On
- * submit it checks the name and email, builds a plain-text request, and
- * offers two ways to send it: open the visitor's email app, or copy the text.
+ * With a form service configured (the form has data-endpoint), the request is
+ * sent straight to the inbox and the visitor sees a confirmation.
  *
- * To have the form submit directly later, replace handleSubmit with a
- * request to a form service.
+ * Without one, or if sending fails, the form builds the request as text and
+ * offers two ways to send it: open the visitor's email app, or copy the text.
  */
 (function () {
     'use strict';
 
-    const CONTACT_EMAIL = 'info@purposefulsolutionswebdesign.com';
     const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
     const form = document.getElementById('lead');
@@ -19,6 +17,9 @@
         return;
     }
 
+    const endpoint = form.dataset.endpoint;
+    const contactEmail = form.dataset.contactEmail;
+    const submitButton = form.querySelector('button[type="submit"]');
     const result = document.getElementById('result');
     const resultMessage = document.getElementById('result-msg');
     const resultText = document.getElementById('result-text');
@@ -30,9 +31,13 @@
         return document.getElementById(id).value.trim();
     }
 
-    function setSendOptionsVisible(visible) {
-        mailLink.hidden = !visible;
-        copyButton.hidden = !visible;
+    function showResult(message, { requestText = '', sendOptions = false } = {}) {
+        result.classList.add('is-visible');
+        resultMessage.textContent = message;
+        resultText.textContent = requestText;
+        resultText.hidden = !requestText;
+        mailLink.hidden = !sendOptions;
+        copyButton.hidden = !sendOptions;
     }
 
     // pricing.html links here as contact.html?package=Starter|Standard|Pro
@@ -61,32 +66,61 @@
         ].join('\n');
     }
 
-    function handleSubmit(event) {
+    // Fallback: hand the visitor a ready-made email
+    function offerEmailDraft(intro) {
+        const body = buildRequest();
+        const subject = `${fieldValue('need')} request from ${fieldValue('name')}`;
+        mailLink.href =
+            `mailto:${contactEmail}` +
+            `?subject=${encodeURIComponent(subject)}` +
+            `&body=${encodeURIComponent(body)}`;
+        showResult(`${intro} Send it from your email app, or copy it and email ${contactEmail}.`, {
+            requestText: body,
+            sendOptions: true,
+        });
+    }
+
+    async function sendToInbox() {
+        const payload = Object.fromEntries(new FormData(form));
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(payload),
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || data.success === false) {
+            throw new Error(data.message || `Form service returned ${response.status}`);
+        }
+    }
+
+    async function handleSubmit(event) {
         event.preventDefault();
-        result.classList.add('is-visible');
 
-        const name = fieldValue('name');
-        const email = fieldValue('email');
-
-        if (!name || !EMAIL_PATTERN.test(email)) {
-            resultMessage.textContent = 'Add your name and a valid email address so we can reply.';
-            resultText.textContent = '';
-            setSendOptionsVisible(false);
+        if (!fieldValue('name') || !EMAIL_PATTERN.test(fieldValue('email'))) {
+            showResult('Add your name and a valid email address so I can reply.');
             return;
         }
 
-        const body = buildRequest();
-        const subject = `${fieldValue('need')} request from ${name}`;
+        if (!endpoint) {
+            offerEmailDraft('Your request is ready.');
+            return;
+        }
 
-        resultText.textContent = body;
-        mailLink.href =
-            `mailto:${CONTACT_EMAIL}` +
-            `?subject=${encodeURIComponent(subject)}` +
-            `&body=${encodeURIComponent(body)}`;
-        resultMessage.textContent =
-            `Your request is ready. Send it from your email app, ` +
-            `or copy it and email ${CONTACT_EMAIL}.`;
-        setSendOptionsVisible(true);
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending…';
+        try {
+            await sendToInbox();
+            showResult(
+                `Thanks, ${fieldValue('name')}. Your request was sent, and I'll be in touch soon.`
+            );
+            form.reset();
+            preselectPackage();
+        } catch (error) {
+            offerEmailDraft("Sorry, the form couldn't send your request.");
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send my request';
+        }
     }
 
     async function handleCopy() {
