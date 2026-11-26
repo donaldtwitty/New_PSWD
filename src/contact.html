@@ -1,0 +1,90 @@
+---
+title: 'Contact | Purposeful Solutions Web Design'
+description: 'Get a free site review from Purposeful Solutions Web Design. Email info@purposefulsolutionswebdesign.com or call (915) 704-6261.'
+closer: false
+scripts: ['contact-form.js']
+---
+
+<div class="section">
+    <div class="container contact">
+        <div>
+            <p class="eyebrow">Contact</p>
+            <h1 class="page-title">Get a free site review</h1>
+            <p class="lede">
+                Tell us about your organization. We will look at your current site, or your plans
+                for a first one, and reply with what we would do and what it would cost.
+            </p>
+            <div class="contact-direct">
+                <div>
+                    <small>Email</small>
+                    <a href="mailto:info@purposefulsolutionswebdesign.com">
+                        info@purposefulsolutionswebdesign.com
+                    </a>
+                </div>
+                <div>
+                    <small>Phone</small>
+                    <a href="tel:+19157046261">(915)&nbsp;704&#8209;6261</a>
+                </div>
+            </div>
+        </div>
+        <noscript>
+            <p class="note">
+                This form needs JavaScript. You can email info@purposefulsolutionswebdesign.com or
+                call (915) 704-6261 instead.
+            </p>
+        </noscript>
+        <form id="lead" novalidate>
+            <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+                <label for="org">Organization type</label>
+                <select id="org" name="org">
+                    <option>Local business</option>
+                    <option>Church or ministry</option>
+                    <option>Nonprofit</option>
+                    <option>Veteran-owned business</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="need">What you need</label>
+                <select id="need" name="need">
+                    <option>Free site review</option>
+                    <option>Starter website</option>
+                    <option>Standard website</option>
+                    <option>Pro website</option>
+                    <option>AI search readiness</option>
+                    <option>AI assistant</option>
+                    <option>Custom portal or web app</option>
+                    <option>Care plan</option>
+                    <option>Brand identity</option>
+                </select>
+            </div>
+            <div class="field field--full">
+                <label for="url">Current website, if you have one</label>
+                <input id="url" name="url" type="text" inputmode="url" placeholder="yoursite.com" />
+            </div>
+            <div class="field field--full">
+                <label for="msg">What should the site do for you?</label>
+                <textarea id="msg" name="msg"></textarea>
+            </div>
+            <div class="field field--full">
+                <button class="btn" type="submit">Prepare my request</button>
+            </div>
+            <div id="result" class="form-result" role="status" aria-live="polite">
+                <span id="result-msg"></span>
+                <pre id="result-text"></pre>
+                <div class="cta-row">
+                    <a class="btn" id="mail-link" href="#">Open in my email app</a>
+                    <button class="btn btn--ghost" type="button" id="copy-btn">Copy message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

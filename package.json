@@ -1,0 +1,17 @@
+{
+    "name": "purposeful-solutions-site",
+    "version": "1.0.0",
+    "private": true,
+    "description": "purposefulsolutionswebdesign.com, built with Eleventy",
+    "type": "module",
+    "scripts": {
+        "start": "eleventy --serve",
+        "build": "eleventy",
+        "check": "prettier --check \"src/**/*.{html,css,js,json}\" \"*.{js,json,md}\" \".github/**/*.yml\" && html-validate \"_site/**/*.html\""
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^3.1.8",
+        "html-validate": "^8.29.0",
+        "prettier": "^3.6.2"
+    }
+}

@@ -1,0 +1,29 @@
+{# Site footer. Links and contact details come from src/_data/site.json. #}
+<footer class="site-footer">
+    <div class="container footer-grid">
+        {% include "partials/brand.njk" %}
+        <nav class="footer-nav" aria-label="Footer">
+            {%- for item in site.footerNav %}
+            <a href="{{ item.url }}">{{ item.label }}</a>
+            {%- endfor %}
+        </nav>
+        <div class="footer-contact">
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            <a href="tel:{{ site.phone }}">{{ site.phoneDisplayHtml | safe }}</a>
+        </div>
+        <span class="seal">
+            <img
+                src="/assets/img/tvc.png"
+                alt="Veteran-Owned Business, verified by the Texas Veterans Commission"
+                width="356"
+                height="360"
+                loading="lazy"
+                decoding="async"
+            />
+        </span>
+    </div>
+    <div class="container footer-legal">
+        <span>© {% year %} {{ site.name }}, a DBA of {{ site.legalName }}.</span>
+        <span>Recognized as a Veteran-Owned Business by the Texas Veterans Commission.</span>
+    </div>
+</footer>

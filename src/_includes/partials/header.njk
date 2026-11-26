@@ -1,0 +1,16 @@
+{# Site header and main menu. Menu items come from src/_data/site.json. #}
+<header class="site-header">
+    <div class="container header-bar">
+        {% include "partials/brand.njk" %}
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="menu-icon" aria-hidden="true"></span>
+            Menu
+        </button>
+        <nav id="site-nav" class="main-nav" aria-label="Main">
+            {%- for item in site.nav %}
+            <a href="{{ item.url }}" {%- if item.url == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            {%- endfor %}
+            <a class="btn" href="{{ site.cta.url }}" {%- if site.cta.url == page.url %} aria-current="page"{% endif %}>{{ site.cta.label }}</a>
+        </nav>
+    </div>
+</header>

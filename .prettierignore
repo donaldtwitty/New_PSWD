@@ -1,2 +1,5 @@
-google*.html
-New_PSWD/
+_site/
+node_modules/
+package-lock.json
+src/google*.html
+src/New_PSWD/

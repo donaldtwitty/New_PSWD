@@ -5,5 +5,11 @@
     "printWidth": 100,
     "tabWidth": 4,
     "useTabs": false,
-    "htmlWhitespaceSensitivity": "ignore"
+    "htmlWhitespaceSensitivity": "ignore",
+    "overrides": [
+        {
+            "files": "*.{yml,yaml}",
+            "options": { "tabWidth": 2, "singleQuote": false }
+        }
+    ]
 }
