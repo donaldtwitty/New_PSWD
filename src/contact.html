@@ -1,0 +1,140 @@
+---
+title: 'Contact | Purposeful Solutions Web Design'
+description: 'Get a free site review from Purposeful Solutions Web Design. Email info@purposefulsolutionswebdesign.com or call (915) 704-6261.'
+closer: false
+scripts: ['contact-form.js']
+---
+
+{#- The form sends through Web3Forms once site.contactForm.accessKey is set in src/_data/site.json.
+Without a key it falls back to opening the visitor's email app. -#} {%- set form = site.contactForm
+-%} {%- set sends = form.accessKey | length > 0 -%}
+<div class="section">
+    <div class="container contact">
+        <div>
+            <p class="eyebrow">Contact</p>
+            <h1 class="page-title">Get a free site review</h1>
+            <p class="lede">
+                Tell me about your organization. I'll look at your current site, or your plans for a
+                first one, and reply with what I would do and what it would cost.
+            </p>
+            <div class="contact-direct">
+                <div>
+                    <small>Email</small>
+                    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                </div>
+                <div>
+                    <small>Phone</small>
+                    <a href="tel:{{ site.phone }}">{{ site.phoneDisplayHtml | safe }}</a>
+                </div>
+                {%- if site.bookingUrl %}
+                <div>
+                    <small>Prefer to talk?</small>
+                    <a href="{{ site.bookingUrl }}">Book a free 20-minute call</a>
+                </div>
+                {%- endif %}
+            </div>
+        </div>
+        {%- if not sends %}
+        <noscript>
+            <p class="note">
+                This form needs JavaScript. You can email {{ site.email }} or call {{
+                site.phoneDisplay }} instead.
+            </p>
+        </noscript>
+        {%- endif %}
+        <form
+            id="lead"
+            {%-
+            if
+            sends
+            %}
+            method="post"
+            action="{{ form.endpoint }}"
+            data-endpoint="{{ form.endpoint }}"
+            {%-
+            endif
+            %}
+            data-contact-email="{{ site.email }}"
+            novalidate
+        >
+            {%- if sends %}
+            <input type="hidden" name="access_key" value="{{ form.accessKey }}" />
+            <input type="hidden" name="subject" value="New request from the website" />
+            <input type="hidden" name="from_name" value="{{ site.name }} website" />
+            {#- Spam trap: hidden from people, bots tend to fill it in #}
+            <input
+                class="visually-hidden"
+                type="checkbox"
+                name="botcheck"
+                tabindex="-1"
+                aria-hidden="true"
+            />
+            {%- endif %}
+            <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+                <label for="org">Organization type</label>
+                <select id="org" name="organization">
+                    <option>Local business</option>
+                    <option>Church or ministry</option>
+                    <option>Nonprofit</option>
+                    <option>Veteran-owned business</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="need">What you need</label>
+                <select id="need" name="need">
+                    <option>Free site review</option>
+                    <option>Starter website</option>
+                    <option>Standard website</option>
+                    <option>Pro website</option>
+                    <option>AI search readiness</option>
+                    <option>AI assistant</option>
+                    <option>Custom portal or web app</option>
+                    <option>Care plan</option>
+                    <option>Brand identity</option>
+                </select>
+            </div>
+            <div class="field field--full">
+                <label for="url">Current website, if you have one</label>
+                <input
+                    id="url"
+                    name="current_site"
+                    type="text"
+                    inputmode="url"
+                    placeholder="yoursite.com"
+                />
+            </div>
+            <div class="field field--full">
+                <label for="msg">What should the site do for you?</label>
+                <textarea id="msg" name="message"></textarea>
+            </div>
+            <div class="field field--full">
+                <button class="btn" type="submit">
+                    {{ 'Send my request' if sends else 'Prepare my request' }}
+                </button>
+                <p class="form-note">
+                    I only use your details to reply.
+                    <a href="/privacy.html">Privacy policy</a>
+                </p>
+            </div>
+            <div id="result" class="form-result" role="status" aria-live="polite">
+                <span id="result-msg"></span>
+                <pre id="result-text"></pre>
+                <div class="cta-row">
+                    <a class="btn" id="mail-link" href="#" hidden>Open in my email app</a>
+                    <button class="btn btn--ghost" type="button" id="copy-btn" hidden>
+                        Copy message
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

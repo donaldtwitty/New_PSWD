@@ -1,4 +1,6 @@
+_site/
 node_modules/
-coverage/
-*.log
+.idea/
+.vscode/
 .DS_Store
+Thumbs.db

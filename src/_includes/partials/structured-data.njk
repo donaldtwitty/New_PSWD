@@ -1,0 +1,27 @@
+{# Business details Google can show in search results (schema.org) #}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}/",
+        "logo": "{{ site.url }}/assets/img/ps-logo-icon.png",
+        "image": "{{ site.url }}{{ site.shareImage }}",
+        "description": "Veteran-owned web design studio in the San Antonio area for small businesses, churches and nonprofits.",
+        "email": "{{ site.email }}",
+        "telephone": "+1-915-704-6261",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Antonio",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+        },
+        "areaServed": "San Antonio, Texas",
+        "founder": { "@type": "Person", "name": "Donald C. Twitty, Jr." },
+        "parentOrganization": { "@type": "Organization", "name": "{{ site.legalName }}" },
+        "sameAs": [
+            "{{ site.linkedInUrl }}"
+            {%- if site.googleBusinessUrl %}, "{{ site.googleBusinessUrl }}"{% endif %}
+        ]
+    }
+</script>

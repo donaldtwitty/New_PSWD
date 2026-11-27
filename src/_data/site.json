@@ -1,0 +1,34 @@
+{
+    "name": "Purposeful Solutions Web Design",
+    "url": "https://purposefulsolutionswebdesign.com",
+    "email": "info@purposefulsolutionswebdesign.com",
+    "phone": "+19157046261",
+    "phoneDisplay": "(915) 704-6261",
+    "phoneDisplayHtml": "(915)&nbsp;704&#8209;6261",
+    "legalName": "Twitty Enterprise LLC",
+    "themeColor": "#150F33",
+    "shareImage": "/assets/img/og-image.png",
+
+    "contactForm": {
+        "endpoint": "https://api.web3forms.com/submit",
+        "accessKey": "946996f1-f0d4-47b0-948c-cfe437c5945a"
+    },
+    "analytics": {
+        "goatcounterCode": ""
+    },
+    "bookingUrl": "",
+    "googleBusinessUrl": "",
+    "linkedInUrl": "https://www.linkedin.com/company/purposefulsolutionswebdesign/",
+
+    "nav": [
+        { "label": "Home", "url": "/" },
+        { "label": "Services", "url": "/services.html" },
+        { "label": "Pricing", "url": "/pricing.html" }
+    ],
+    "cta": { "label": "Free site review", "url": "/contact.html" },
+    "footerNav": [
+        { "label": "Services", "url": "/services.html" },
+        { "label": "Pricing", "url": "/pricing.html" },
+        { "label": "Contact", "url": "/contact.html" }
+    ]
+}
