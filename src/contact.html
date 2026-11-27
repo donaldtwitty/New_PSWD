@@ -29,7 +29,9 @@ Without a key it falls back to opening the visitor's email app. -#} {%- set form
                 {%- if site.bookingUrl %}
                 <div>
                     <small>Prefer to talk?</small>
-                    <a href="{{ site.bookingUrl }}">Book a free 20-minute call</a>
+                    <a href="{{ site.bookingUrl }}" target="_blank" rel="noopener">
+                        Book a free 30-minute call
+                    </a>
                 </div>
                 {%- endif %}
             </div>
