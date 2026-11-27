@@ -87,7 +87,6 @@ works because the pages are in `src/` and need a build.
 
 ## Pending
 
-- Contact form submits directly (currently it opens the visitor's email app).
 - Point email signatures at `/assets/img/ps-logo-icon.png` and `/assets/img/ps-logo-wordmark.png`,
   then delete `src/New_PSWD/` and its line in `eleventy.config.js`.
 - Delete `src/service-worker.js` (and its line in `eleventy.config.js`) around mid-2027, after the

@@ -11,7 +11,7 @@
 
     "contactForm": {
         "endpoint": "https://api.web3forms.com/submit",
-        "accessKey": ""
+        "accessKey": "946996f1-f0d4-47b0-948c-cfe437c5945a"
     },
     "analytics": {
         "goatcounterCode": ""
