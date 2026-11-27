@@ -2,7 +2,7 @@
    Purposeful Solutions Web Design: site styles
 
    Contents
-   1. Design tokens (colors, fonts, sizes) and dark theme
+   1. Design tokens (colors, fonts, sizes)
    2. Base elements
    3. Layout helpers
    4. Components: buttons, header, footer, cards, forms
@@ -17,24 +17,25 @@
    -------------------------------------------------------------------------- */
 
 :root {
-    /* Light theme */
-    --color-bg: #f6f5fa;
-    --color-surface: #ffffff;
-    --color-ink: #150f33;
-    --color-muted: #5a5670;
-    --color-line: #dedbea;
-    --color-accent: #6b3fe0;
-    --color-accent-ink: #ffffff;
+    /* The site is always dark, whatever the visitor's device setting */
+    color-scheme: dark;
+    --color-bg: #0d0a1f;
+    --color-surface: #17122f;
+    --color-ink: #eeebf8;
+    --color-muted: #a49ebd;
+    --color-line: #2b2450;
+    --color-accent: #a274ff;
+    --color-accent-ink: #0d0a1f;
     --color-highlight: #a274ff;
 
-    /* Dark bands (header, hero, footer) */
-    --band-bg: #150f33;
+    /* Darker bands (header, hero, closing call to action, footer) */
+    --band-bg: #090617;
     --band-ink: #f3f1fa;
     --band-muted: #b1abc9;
-    --band-line: #2e2656;
+    --band-line: #251e47;
 
-    /* Dark single-color client logos turn white in the dark theme */
-    --logo-filter: none;
+    /* Dark single-color client logos are shown in white */
+    --logo-filter: brightness(0) invert(1);
 
     --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
     --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -43,22 +44,6 @@
     --container-width: 1120px;
     --radius: 10px;
     --radius-small: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-        --color-bg: #0d0a1f;
-        --color-surface: #17122f;
-        --color-ink: #eeebf8;
-        --color-muted: #a49ebd;
-        --color-line: #2b2450;
-        --color-accent: #a274ff;
-        --color-accent-ink: #0d0a1f;
-        --band-bg: #090617;
-        --band-line: #251e47;
-        --logo-filter: brightness(0) invert(1);
-    }
 }
 
 /* 2. Base elements
